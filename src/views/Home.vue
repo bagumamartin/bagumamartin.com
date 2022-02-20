@@ -65,13 +65,13 @@ export default {
   }
   
   .content h1{
-    font-size: 80px;
+    font-size: 60px;
     color: #fff;
   }
   
   .content p{
-    font-size: 30px;
-    colour: #fff;
+    font-size: 20px;
+    color: #fff;
   }
   
   .content .buttons{
