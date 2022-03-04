@@ -30,7 +30,7 @@
       </div>
     </nav>
     
-    <section class="section">
+    <section>
       <router-view/>
     </section>
     

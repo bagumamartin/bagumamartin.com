@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap');
 
 * {
   padding: 0;
@@ -9,16 +11,19 @@ html{
   font-size: 10px;
   font-family: 'Montserrat' sans-serif;
 }
+body {
+  
+}
 .container{
-  min-height: 100vh;
+  /* min-height: 100vh; */
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .hero{
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/profile-photo2.jpg) center / cover;
-    position: relative;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/profile-photo2.jpg) no-repeat center / cover;
+    background-position: relative;
   }
   
 #hero1 h1{
@@ -110,4 +115,131 @@ html{
     color: crimson;
     font-weight: 500;
   }
+}
+
+/* Brad typewriter */
+.container2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  padding: 0 3rem;
+}
+
+.container2 h3 h4 {
+  font-weight: 200;
+  margin: 0.4rem;
+}
+
+.container2 h3 {
+  font-size: 15px;
+}
+
+  span.typed-text {
+  color: crimson;
+}
+
+span.cursor {
+  display: inline-block;
+  margin-left: 3px;
+  width: 4px;
+  background-color: #fff;
+  animation: cursorBlink 1s infinite;
+}
+
+span.cursor.typing {
+  animation: none;
+}
+
+@keyframes cursorBlink {
+  49% {
+    background-color: #fff;
+  }
+  50% {
+    background-color: transperent;
+  }
+  99% {
+    background-color: transparent;
+  }
+}
+
+#p2 {
+  font-size: 2rem;
+  color: crimson;
+}
+
+/* Cursor */
+.txt-type > .txt {
+  border-right: 0.2rem solid crimson;
+}
+
+@media(min-width: 1200px) {
+.container2 h3 {
+    font-size: 5rem;
+  }
+} 
+@media(max-width: 800px) {
+  .container {
+    padding: 0 1rem;
+  }
+  .container2 h3 {
+    font-size: 3rem;
+  }
+}
+@media(max-width: 500px) {
+  .container2 h3 {
+    font-size: 2.5rem;
+  }
+  .container2 h4 {
+    font-size: 1.5rem;
+  }
+}
+
+/* About section styles */
+section{
+  padding: 100px 0;
+}
+
+.about{
+  font-family: 'poppins', sans-serif;
+}
+
+.about .title{
+  position: relative;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  font-family: 'Ubuntu', sans-serif;
+  font-family: 'ubuntu', Sans-Serif;
+}
+
+.about .title::before{
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  width: 180px;
+  height: 3px;
+  background: #111;
+  transform: translateX(-50%);
+}
+
+.about .title::after{
+  content: "who I am";
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  font-size: 20px;
+  color: crimson;
+  padding: 5px;
+  background: #fff;
+  transform: translateX(-50%);
+}
+
+.about .about-content .left img{
+  height: 400px;
+  width: 400px;
+  object-fit: cover;
+  border-radius: 6px;
 }
