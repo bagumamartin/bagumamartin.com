@@ -124,8 +124,8 @@ import { setTimeout } from 'timers';
 </script>
 
 <style scoped type="text/css" media="all">
-@import '../assets/mystyles.css';
-@import '../assets/helpers.css';
+/* @import '../assets/mystyles.css';
+@import '../assets/helpers.css'; */
 
   /* .hero{
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/profile-photo2.jpg) center / cover;

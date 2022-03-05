@@ -22,4 +22,4 @@ createApp(App)
   .component('fai', FontAwesomeIcon)
   .mount('#app')
 
-Vue.config.productionTip = false
+// Vue.config.productionTip = false

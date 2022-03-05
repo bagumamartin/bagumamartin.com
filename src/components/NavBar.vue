@@ -1,11 +1,7 @@
 <template>
-  <div class="home">
-    <!-- Banner Area -->
-    <div class="block">
-      <section class="hero is-fullheight">
-        <div class="hero-head">
-            <div class="columns is-mobile is-marginless">
-              <div class="column">
+    <div class="hero-head">
+        <div class="columns is-mobile is-marginless">
+            <div class="column">
                 <div class="navbar-brand" @click="showMobileMenu = false">
                   <router-link to="/" class="title is-4">
                     <strong>Baguma Martin</strong>
@@ -21,9 +17,9 @@
                     <router-link to="chat" class="navbar-item is-2">Chat</router-link>
                   </div>
                 </div>
-              </div>
+            </div>
 
-              <div class="column">
+            <div class="column">
                 <div class="navbar-menu" id="navbar-menu">
                   <div class="navbar-item">
                     <div class="buttons">
@@ -44,39 +40,18 @@
                     <span aria-hidden="true"></span>
                   </a>
                 </div>
-              </div>
             </div>
         </div>
-        <div class="hero-body">
-          <div class="content">
-            <p>Hello, <span></span></p>
-            <p>My Name Is <span></span></p>
-            <p>Martin <span></span></p>
-            <p>I <span></span>
-            <span class="typed-text">{{ typeValue }}</span>
-            <span class="cursor" :class="{'typing': typeStatus}">&nbsp;</span>
-            </p>
-            <p>Welcome to my website</p>
-          </div>
-        </div>
-      </section>
     </div>
-    <!-- End of Banner Area -->
-  </div>
 </template>
 
-<script type="text/javascript" charset="utf-8">
-  export default {
-    name: 'Home1',
+<script>
+export default {
+    name: 'NavBar',
     data() {
-      return {
-        showMobileMenu: '',
-      }
+        return {
+            showMobileMenu: false,
+        }
     },
-    props: ['showMobileMenu',]
-  }
+}
 </script>
-
-<style type="text/css" media="all">
-  
-</style>

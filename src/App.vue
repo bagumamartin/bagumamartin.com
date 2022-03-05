@@ -1,5 +1,5 @@
 <template>
-  <div id="wrapper">
+  <div id="wrapper" v-cloak>
     <nav class="navbar is-info">
       <div class="navbar-brand">
         <router-link to="/" class="navbar-item" @click="showMobileMenu = false"><strong>Baguma Martin</strong></router-link>
@@ -35,7 +35,7 @@
     </section>
     
     <footer class="footer is-info">
-      <p class="has-text-centered">Copyright &#169 2021-2022</p>
+      <p class="has-text-centered">Copyright &#169; 2021-2022</p>
     </footer>
   </div>
   
@@ -47,12 +47,15 @@
       return {
         showMobileMenu: false,
       }
-    }
+    },
   }
 </script>
 
 <style lang="scss">
-@import '../node_modules/bulma'
+@import '../node_modules/bulma';
 
+[v-cloak] {
+  display: none;
+}
 /* Footer styles */
 </style>
