@@ -78,7 +78,7 @@ import { setTimeout } from 'timers';
       return {
         typeValue: '',
         typeStatus: false,
-        typeArray: ['a Pharmacy Technician', 'a Software Developer', 'an Entreprenuer', 'a Creator'],
+        typeArray: ['can prepare medications, prescriptions', 'help businesses setup websites and software applications', 'am an Entreprenuer', 'am a Creator'],
         typingSpeed: 200,
         erasingSpeed: 100,
         newTextDelay: 2000,

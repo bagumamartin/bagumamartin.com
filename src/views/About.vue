@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <NavBar />
+    <NavBar/>
     <h1>Coming soon</h1>
   </div>
 </template>
@@ -9,5 +9,8 @@
 import NavBar from '@/components/NavBar.vue'
 export default {
   name: 'About',
+  components: {
+    NavBar,
+  }
 }
 </script>
