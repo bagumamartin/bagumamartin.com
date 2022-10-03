@@ -2,6 +2,8 @@
     <section>
         <div>
             <header>
+                <div class="brand"></div>
+                <div class="harmburger-menu"></div>
                 <nav>
                     <router-link v-for="route in routes" :to="route.path">{{ `${route.name[0].toLocaleUpperCase() + route.name.substring(1)} ` }}</router-link>
                 </nav>
