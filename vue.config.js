@@ -1,9 +1,9 @@
-const { defineConfig } = require('@vue/cli-service')
+const { defineConfig } = require("@vue/cli-service");
 module.exports = defineConfig({
   transpileDependencies: true,
   css: {
     loaderOptions: {
-              scss: {
+      scss: {
         additionalData: `
                         @import "~@/assets/scss/_config.scss";
                         @import "~@/assets/scss/_colors.scss";
@@ -11,8 +11,8 @@ module.exports = defineConfig({
                         @import "~@/assets/scss/_animations.scss";
                         @import "~@/assets/scss/_responsiveness.scss";
                         @import "~@/assets/scss/_transitions.scss";
-                        `
+                        `,
       },
-    }
+    },
   },
-})
+});

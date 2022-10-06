@@ -7,16 +7,13 @@
 </template>
 
 <script>
-
-  export default {
-    
-    data() {
-      return {
-        // routes1: Array,
-      }
-    },
-    
-  }
+export default {
+  data() {
+    return {
+      // routes1: Array,
+    };
+  },
+};
 </script>
 
 <style lang="scss">
