@@ -9,10 +9,9 @@
         <p>My name is, <span class="reveal-box"></span></p>
         <p>Baguma Martin. <span class="reveal-box"></span></p>
         <p>
-          I am 
           <span class="typer">
             <Typer 
-            :typeAttributes="occupations"
+            :typeAttributes="services"
             cursorColor="#f9004d"
             />
           </span>
@@ -56,10 +55,10 @@ export default {
           "path": "/about"
         }
       ],
-      occupations: [
-        'an Entreprenuer',
-        'a Creator',
-        'an Applications Developer',
+      services: [
+        'Do you need a website?',
+        'Do you need an app?',
+        'Do you need software solutions?',
       ],
     }
   },
@@ -75,17 +74,18 @@ export default {
     .hero-animations {
       font-size: 1.3rem;
       font-weight: 600;
+      margin-top: 15vh;
       margin-left: 0.7rem;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
 
-      p {
+      & p {
         display: block;
         width: fit-content;
         position: relative;
         color: transparent;
-        margin-top: 1.5rem;
+        margin-top: 3vh;
         animation: text-reveal 0.5s ease forwards;
         animation-delay: 1s;
 
@@ -122,6 +122,7 @@ export default {
         }
 
         &:nth-child(4) {
+          margin-top: 5vh;
           animation-delay: 4s;
 
           span {
@@ -132,6 +133,10 @@ export default {
 
               color: $primary-color;
               font-weight: 600;
+
+              @include media-query(mobile-portrait) {
+                font-size: 5.5vw;
+              }
             }
             &.reveal-box {
               animation-delay: 3.5s;
@@ -155,7 +160,7 @@ export default {
     }
 
     & .welcome-text {
-      padding-top: 10rem;
+        margin-top: 15vh;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -164,10 +169,18 @@ export default {
         animation: element-reveal 1.5s ease infinite;
         animation-delay: 5s;
 
+        @include media-query(mobile-landscape) {
+          display: none;
+        }
+
         & p {
-          color: white;
+          color: yellow;
           font-weight: 700;
           font-size: 1.5rem;
+
+          @include media-query(mobile-landscape) {
+            color: blue;
+          }
         }
         
         & button {

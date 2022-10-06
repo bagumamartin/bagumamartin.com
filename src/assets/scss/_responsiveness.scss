@@ -1,0 +1,35 @@
+$media-queries: (
+    extra-large-screens: (
+        breakpoint: '(min-width: 1201px)',
+    ),
+    large-screens: (
+        breakpoint: '(min-width: 1025px) and (max-width: 1200px)',
+    ),
+    small-screens: (
+        breakpoint: '(min-width: 769px) and (max-width: 1024px)',
+    ),
+    tablet-landscape: (
+        breakpoint: '(min-width: 481px) and (max-width: 768px) and (orientation: landscape)',
+    ),
+    tablet: (
+        breakpoint: '(min-width: 481px) and (max-width: 768px)',
+    ),
+    mobile-landscape: (
+        breakpoint: '(min-width: 320px) and (max-width: 480px) and (orientation: landscape)',
+    ),
+    mobile-portrait: (
+        breakpoint: '(min-width: 320px) and (max-width: 480px) and (orientation: portrait)'
+    )
+);
+
+@mixin media-query ($size) {
+    @each $item, $value in $media-queries {
+        @if $item == $size {
+            @if map-get($value, breakpoint) != null {
+                @media only screen and #{map-get($value, breakpoint)} {
+                    @content;
+                }
+            }
+        }
+    }
+}

@@ -4,4 +4,18 @@ import './registerServiceWorker'
 import router from './router'
 import store from './store'
 
-createApp(App).use(store).use(router).mount('#app')
+// Import font awesome
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { fas } from '@fortawesome/free-solid-svg-icons'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+import { far } from '@fortawesome/free-regular-svg-icons'
+
+library
+    .add(fas, fab, far)
+
+createApp(App)
+    .use(store)
+    .use(router)
+    .component('fai', FontAwesomeIcon)
+    .mount('#app')

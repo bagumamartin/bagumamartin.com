@@ -9,6 +9,8 @@ module.exports = defineConfig({
                         @import "~@/assets/scss/_colors.scss";
                         @import "~@/assets/scss/_fonts.scss";
                         @import "~@/assets/scss/_animations.scss";
+                        @import "~@/assets/scss/_responsiveness.scss";
+                        @import "~@/assets/scss/_transitions.scss";
                         `
       },
     }
