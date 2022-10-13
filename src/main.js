@@ -14,7 +14,14 @@ import { far } from "@fortawesome/free-regular-svg-icons";
 library.add(fas, fab, far);
 
 createApp(App)
+  .component("fai", FontAwesomeIcon)
   .use(store)
   .use(router)
-  .component("fai", FontAwesomeIcon)
   .mount("#app");
+// await router.isReady();
+// app.mount("#app");
+// // .mount("#app");
+
+// new Vue({
+//   render: (h) => h(App),
+// }).$mount("#app");

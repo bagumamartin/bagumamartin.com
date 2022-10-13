@@ -67,6 +67,7 @@ export default {
 
 <style scoped lang="scss">
 header {
+  background-color: #0246fa;
   padding: 1rem;
   & .brand {
     position: absolute;
@@ -167,7 +168,6 @@ header {
       height: 100vh;
       overflow: hidden;
       background: black;
-      // padding-right: 1rem;
       transform: translateY(0);
       @include transition-ease;
 
@@ -186,7 +186,7 @@ header {
       & a {
         font-size: 2rem;
         font-weight: bold;
-        color: #2c3e50;
+        color: yellow;
         display: block;
 
         @include media-query(extra-large-screens) {
@@ -196,7 +196,7 @@ header {
         }
 
         &.router-link-exact-active {
-          color: crimson;
+          color: yellow;
         }
       }
 

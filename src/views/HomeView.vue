@@ -20,6 +20,9 @@
         <button class="cta">Let's get started</button>
       </div>
     </div>
+    <section style="height: 100vh;">
+      <div>About</div>
+    </section>
   </div>
 </template>
 
@@ -64,10 +67,16 @@ export default {
 
 <style scoped lang="scss">
 .hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url(../assets/images/profile.jpg) no-repeat center / cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(../assets/images/landing-page-mobile-image.jpg) no-repeat center / cover;
   background-position: relative;
   height: 100vh;
+
+  @include media-query(extra-large-screens) {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url(../assets/images/landing-page-image.jpg) no-repeat center / cover;
+    background-position: relative;
+  }
 
   .hero-animations {
     font-size: 1.3rem;
