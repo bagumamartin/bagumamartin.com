@@ -9,8 +9,12 @@
           <h1 class="">Hello, I'm Baguma</h1>
         </div>
         <div class="typer w-full text-left text-black text-[5vw] font-poppins">
-          I am
-          <UtilitiesTyper class="inline" :typing-list="typingList" />
+          I am <span class="inline hidden">an applications developer.</span>
+          <UtilitiesTyper
+            class="inline"
+            :typing-list="typingList"
+            cursor-color="primary"
+          />
         </div>
         <div class="w-full text-center text-black text-paragraph font-lexend">
           <p>
@@ -174,7 +178,87 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
+// Head data for SEO
+useHead({
+  title: "Home Page",
+
+  // Twitter card data for SEO
+  meta: [
+    {
+      hid: "twitter:card",
+      name: "twitter:card",
+      content: "summary_large_image",
+    },
+    { hid: "twitter:site", name: "twitter:site", content: "@BagumaMartinA" },
+    {
+      hid: "twitter:creator",
+      name: "twitter:creator",
+      content: "@BagumaMartinA",
+    },
+    { hid: "twitter:title", name: "twitter:title", content: "Home Page" },
+    {
+      hid: "twitter:description",
+      name: "twitter:description",
+      content:
+        "I am an applications developer, a data scientist, a systems developer, a cybersecurity analyst, and a graphics designer.",
+    },
+    {
+      hid: "twitter:image",
+      name: "twitter:image",
+      content: "https://bagumamartin.com/assets/images/hero.png",
+    },
+    {
+      hid: "twitter:url",
+      name: "twitter:url",
+      content: "https://www.bagumamartin.com",
+    },
+
+    // Open graph tag for SEO
+    {
+      hid: "og:site_name",
+      name: "og:site_name",
+      content: "Baguma Martin | Applications Developer",
+    },
+    { hid: "og:type", name: "og:type", content: "website" },
+    { hid: "og:title", name: "og:title", content: "Home Page" },
+    {
+      hid: "og:description",
+      name: "og:description",
+      content:
+        "I am an applications developer, a data scientist, a systems developer, a cybersecurity analyst, and a graphics designer.",
+    },
+    {
+      hid: "og:image",
+      name: "og:image",
+      content: "https://bagumamartin.com/assets/images/hero.png",
+    },
+    {
+      hid: "og:image:secure_url",
+      name: "og:image:secure_url",
+      content: "https://bagumamartin.com/assets/images/hero.png",
+    },
+    {
+      hid: "og:image:alt",
+      name: "og:image:alt",
+      content: "Baguma Martin | Applications Developer",
+    },
+    {
+      hid: "og:url",
+      name: "og:url",
+      content: "https://www.bagumamartin.com",
+    },
+  ],
+  link: [
+    {
+      hid: "canonical",
+      rel: "canonical",
+      href: "https://www.bagumamartin.com",
+    },
+  ],
+});
+
+// Typing list for the typer component
 const typingList = [
   "an Applications Developer",
   "a Data Scientist",
