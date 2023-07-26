@@ -1,0 +1,50 @@
+@keyframes text-reveal-box {
+    50% {
+        width: 100%;
+        left: 0;
+    }
+    100% {
+        width: 0;
+        left: 100%;
+    }
+}
+
+@keyframes text-reveal {
+    100% {
+        color: yellow;
+    }
+}
+
+@keyframes text-reveal-name {
+    100% {
+        color: #DC143C;
+        font-weight: 700;
+    }
+}
+
+@keyframes cursorBlink {
+    // 49% {
+    //   background-color: crimson;
+    // }
+    50% {
+      background-color: transparent;
+    }
+    99% {
+      background-color: transparent;
+    }
+}
+
+@keyframes element-reveal {
+    100% {
+        visibility: visible;
+    }
+}
+
+@keyframes element-display-reveal {
+    0% {
+        visibility: hidden;
+    }
+    100% {
+        visibility: visible;
+    }
+}
