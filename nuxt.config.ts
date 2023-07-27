@@ -27,12 +27,20 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
-      title:
-        "Software Applications Development Services in Uganda | Hire a Professional Developer",
       htmlAttrs: {
         lang: "en",
       },
       meta: [
+        {
+          hid: "og:image",
+          property: "og:image",
+          content: "https://bagumamartin.com/images/social_cards_image.jpg",
+        },
+        {
+          hid: "og:image:secure_url",
+          property: "og:image:secure_url",
+          content: "https://bagumamartin.com/images/social_cards_image.jpg",
+        },
         { charset: "utf-8" },
         {
           name: "viewport",
@@ -46,6 +54,8 @@ export default defineNuxtConfig({
             "Looking for a professional application developer in Uganda? I offer a wide range of custom software development services, including website, mobile and desktop apps design and development. I am experienced in various major programming languages and platforms, and I can help you create applications that meets your specific needs. Hire me for your project today.",
         },
       ],
+      title:
+        "Software Applications Development Services in Uganda | Hire a Professional Developer",
       link: [
         {
           hid: "canonical",

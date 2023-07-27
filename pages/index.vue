@@ -181,8 +181,6 @@
 <script setup lang="ts">
 // Head data for SEO
 useHead({
-  title: "Software Applications Development Services in Uganda",
-
   // Twitter card data for SEO
   meta: [
     {
@@ -244,16 +242,16 @@ useHead({
       content:
         "Looking for a professional application developer in Uganda? I offer a wide range of custom software development services, including website, mobile and desktop apps design and development. I am experienced in various major programming languages and platforms, and I can help you create applications that meets your specific needs. Hire me for your project today.",
     },
-    {
-      hid: "og:image",
-      property: "og:image",
-      content: "https://bagumamartin.com/images/social_cards_image.jpg",
-    },
-    {
-      hid: "og:image:secure_url",
-      property: "og:image:secure_url",
-      content: "https://bagumamartin.com/images/social_cards_image.jpg",
-    },
+    // {
+    //   hid: "og:image",
+    //   property: "og:image",
+    //   content: "https://bagumamartin.com/images/social_cards_image.jpg",
+    // },
+    // {
+    //   hid: "og:image:secure_url",
+    //   property: "og:image:secure_url",
+    //   content: "https://bagumamartin.com/images/social_cards_image.jpg",
+    // },
     {
       hid: "og:image:alt",
       property: "og:image:alt",
@@ -304,7 +302,12 @@ useHead({
       rel: "canonical",
       href: "https://www.bagumamartin.com",
     },
+    {
+      itemprop: "thumbnailUrl",
+      href: "https://bagumamartin.com/images/social_cards_image.jpg",
+    },
   ],
+  title: "Software Applications Development Services in Uganda",
 });
 
 // Typing list for the typer component
