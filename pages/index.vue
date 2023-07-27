@@ -228,42 +228,74 @@ useHead({
     // Open graph tag for SEO
     {
       hid: "og:site_name",
-      name: "og:site_name",
+      property: "og:site_name",
       content: "Baguma Martin | Applications Developer",
     },
     {
       hid: "og:title",
-      name: "og:title",
+      property: "og:title",
       content:
         "Software Applications Development Services in Uganda | Hire a Professional Developer",
     },
     { hid: "og:type", name: "og:type", content: "website" },
     {
       hid: "og:description",
-      name: "og:description",
+      property: "og:description",
       content:
         "Looking for a professional application developer in Uganda? I offer a wide range of custom software development services, including website, mobile and desktop apps design and development. I am experienced in various major programming languages and platforms, and I can help you create applications that meets your specific needs. Hire me for your project today.",
     },
     {
       hid: "og:image",
-      name: "og:image",
+      property: "og:image",
       content: "https://bagumamartin.com/images/social_cards_image.jpg",
     },
     {
       hid: "og:image:secure_url",
-      name: "og:image:secure_url",
+      property: "og:image:secure_url",
       content: "https://bagumamartin.com/images/social_cards_image.jpg",
     },
     {
       hid: "og:image:alt",
-      name: "og:image:alt",
+      property: "og:image:alt",
       content:
         "Photograph of a software developer's desk with a laptop connecter to a monitor.",
     },
     {
+      hid: "og:image:type",
+      property: "og:image:type",
+      content: "image/jpeg",
+    },
+    {
+      hid: "og:image:width",
+      property: "og:image:width",
+      content: "300",
+    },
+    {
+      hid: "og:image:height",
+      property: "og:image:height",
+      content: "300",
+    },
+    {
       hid: "og:url",
-      name: "og:url",
+      property: "og:url",
       content: "https://www.bagumamartin.com",
+    },
+
+    // Microsoft tiles
+    {
+      hid: "msapplication-TileColor",
+      name: "msapplication-TileColor",
+      content: "#DC143C",
+    },
+    {
+      hid: "msapplication-TileImage",
+      name: "msapplication-TileImage",
+      content: "https://bagumamartin.com/images/social_cards_image.jpg",
+    },
+    {
+      hid: "theme-color",
+      name: "theme-color",
+      content: "#DC143C",
     },
   ],
   link: [
