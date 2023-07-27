@@ -27,7 +27,8 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
-      title: "Baguma Martin | Applications Developer",
+      title:
+        "Software Applications Development Services in Uganda | Hire a Professional Developer",
       htmlAttrs: {
         lang: "en",
       },
@@ -42,7 +43,7 @@ export default defineNuxtConfig({
           hid: "description",
           name: "description",
           content:
-            "I am Baguma Martin, I am an applications developer based in Kampala, Uganda. I am a full-stack developer with a passion for building web applications and mobile applications.",
+            "Looking for a professional application developer in Uganda? I offer a wide range of custom software development services, including website, mobile and desktop apps design and development. I am experienced in various major programming languages and platforms, and I can help you create applications that meets your specific needs. Hire me for your project today.",
         },
       ],
       link: [

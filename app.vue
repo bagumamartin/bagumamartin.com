@@ -9,7 +9,9 @@
 <script setup lang="ts">
 useHead({
   titleTemplate: (titleChunk) => {
-    return titleChunk ? `${titleChunk} - Root Site Title` : "Baguma Martin";
+    return titleChunk
+      ? `${titleChunk} | Hire a Professional Developer`
+      : "Software Applications Development Services in Uganda | Hire a Professional Developer";
   },
 });
 </script>

@@ -181,10 +181,16 @@
 <script setup lang="ts">
 // Head data for SEO
 useHead({
-  title: "Home Page",
+  title: "Software Applications Development Services in Uganda",
 
   // Twitter card data for SEO
   meta: [
+    {
+      hid: "description",
+      name: "description",
+      content:
+        "Looking for a professional application developer in Uganda? I offer a wide range of custom software development services, including website, mobile and desktop apps design and development. I am experienced in various major programming languages and platforms, and I can help you create applications that meets your specific needs. Hire me for your project today.",
+    },
     {
       hid: "twitter:card",
       name: "twitter:card",
@@ -196,17 +202,22 @@ useHead({
       name: "twitter:creator",
       content: "@BagumaMartinA",
     },
-    { hid: "twitter:title", name: "twitter:title", content: "Home Page" },
+    {
+      hid: "twitter:title",
+      name: "twitter:title",
+      content:
+        "Software Applications Development Services in Uganda | Hire a Professional Developer",
+    },
     {
       hid: "twitter:description",
       name: "twitter:description",
       content:
-        "I am an applications developer, a data scientist, a systems developer, a cybersecurity analyst, and a graphics designer.",
+        "Looking for a professional application developer in Uganda? I offer a wide range of custom software development services, including website, mobile and desktop apps design and development. I am experienced in various major programming languages and platforms, and I can help you create applications that meets your specific needs. Hire me for your project today.",
     },
     {
       hid: "twitter:image",
       name: "twitter:image",
-      content: "https://bagumamartin.com/assets/images/hero.png",
+      content: "https://bagumamartin.com/images/social_cards_image.jpg",
     },
     {
       hid: "twitter:url",
@@ -220,28 +231,34 @@ useHead({
       name: "og:site_name",
       content: "Baguma Martin | Applications Developer",
     },
+    {
+      hid: "og:title",
+      name: "og:title",
+      content:
+        "Software Applications Development Services in Uganda | Hire a Professional Developer",
+    },
     { hid: "og:type", name: "og:type", content: "website" },
-    { hid: "og:title", name: "og:title", content: "Home Page" },
     {
       hid: "og:description",
       name: "og:description",
       content:
-        "I am an applications developer, a data scientist, a systems developer, a cybersecurity analyst, and a graphics designer.",
+        "Looking for a professional application developer in Uganda? I offer a wide range of custom software development services, including website, mobile and desktop apps design and development. I am experienced in various major programming languages and platforms, and I can help you create applications that meets your specific needs. Hire me for your project today.",
     },
     {
       hid: "og:image",
       name: "og:image",
-      content: "https://bagumamartin.com/assets/images/hero.png",
+      content: "https://bagumamartin.com/images/social_cards_image.jpg",
     },
     {
       hid: "og:image:secure_url",
       name: "og:image:secure_url",
-      content: "https://bagumamartin.com/assets/images/hero.png",
+      content: "https://bagumamartin.com/images/social_cards_image.jpg",
     },
     {
       hid: "og:image:alt",
       name: "og:image:alt",
-      content: "Baguma Martin | Applications Developer",
+      content:
+        "Photograph of a software developer's desk with a laptop connecter to a monitor.",
     },
     {
       hid: "og:url",

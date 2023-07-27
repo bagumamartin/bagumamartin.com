@@ -88,19 +88,10 @@ import { useShowMenuStore } from "@/stores/header/showMenuStore";
 
 const storeShowMenu = useShowMenuStore();
 
-// Head meta tags for SEO
-const route = useRoute();
+// // Head meta tags for SEO
+// const route = useRoute();
 
-useHead({
-  meta: [{ property: "og:title", content: `App Name - ${route.meta.title}` }],
-});
-
-// Social media meta tags
-useSeoMeta({
-  ogTitle: "My Amazing Site",
-  description: "This is my amazing site, let me tell you all about it.",
-  ogDescription: "This is my amazing site, let me tell you all about it.",
-  ogImage: "https://example.com/image.png",
-  twitterCard: "summary_large_image",
-});
+// useHead({
+//   meta: [{ property: "og:title", content: `App Name - ${route.meta.title}` }],
+// });
 </script>
