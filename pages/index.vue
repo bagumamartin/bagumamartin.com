@@ -11,7 +11,7 @@
           <h1 class="">Hello, I'm Baguma</h1>
         </div>
         <div
-          class="typer w-full text-left text-black text-[5vw] font-poppins lg:text-heading-1 lg:w-[58vw]"
+          class="typer w-full text-left text-black text-[5vw] font-poppins lg:text-heading-1 lg:w-[60vw]"
         >
           I am <span class="inline hidden">an applications developer.</span>
           <UtilitiesTyper
