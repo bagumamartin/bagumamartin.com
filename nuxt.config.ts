@@ -25,9 +25,10 @@ export default defineNuxtConfig({
   generate: {
     fallback: true, // Uses '404.html' instead of the default '200.html'
   },
-  // gtag: {
-  //   id: process.env.NUXT_PUBLIC_GTAG_ID,
-  // },
+  gtag: {
+    id: process.env.NUXT_PUBLIC_GTAG_ID,
+    initialConsent: true,
+  },
   app: {
     head: {
       htmlAttrs: {
