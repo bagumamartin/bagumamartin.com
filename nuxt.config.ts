@@ -46,10 +46,10 @@ export default defineNuxtConfig({
       ],
       script: [
         // add google tag manager script here
-        {
-          src: `https://www.googletagmanager.com/gtag/js?id=${process.env.NUXT_PUBLIC_GTAG_ID}`,
-          async: true,
-        },
+        // {
+        //   src: `https://www.googletagmanager.com/gtag/js?id=${process.env.NUXT_PUBLIC_GTAG_ID}`,
+        //   async: true,
+        // },
       ],
     },
   },
