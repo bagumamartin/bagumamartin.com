@@ -8,7 +8,7 @@
     </div>
     <div class="w-full flex justify-center mt-[10vh]">
       <UtilitiesButton
-        class="w-[70vw] rounded-full bg-accent"
+        class="w-[70vw] rounded-full bg-accent md:w-[50vw] lg:w-[20vw]"
         label="Go back to home page"
         navigation-path="/"
       />

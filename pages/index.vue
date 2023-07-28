@@ -1,14 +1,18 @@
 <template>
   <div>
-    <div class="body px-[2rem]">
+    <div class="body px-[2rem] lg:px-[8rem]">
       <section
         id="hero"
         class="h-[90vh] gap-y-[10vh] flex flex-col items-center justify-center"
       >
-        <div class="w-full text-left text-primary text-heading-3 font-poppins">
+        <div
+          class="w-full text-left text-primary text-heading-3 font-poppins lg:text-center"
+        >
           <h1 class="">Hello, I'm Baguma</h1>
         </div>
-        <div class="typer w-full text-left text-black text-[5vw] font-poppins">
+        <div
+          class="typer w-full text-left text-black text-[5vw] font-poppins lg:text-heading-1 lg:w-[57vw]"
+        >
           I am <span class="inline hidden">an applications developer.</span>
           <UtilitiesTyper
             class="inline"
@@ -16,7 +20,9 @@
             cursor-color="primary"
           />
         </div>
-        <div class="w-full text-center text-black text-paragraph font-lexend">
+        <div
+          class="w-full text-center text-black text-paragraph font-lexend lg:w-[50vw]"
+        >
           <p>
             I help organizations implement innovative and user-friendly web,
             mobile and desktop applications. Get in touch today to discuss your
@@ -24,7 +30,7 @@
           </p>
         </div>
         <UtilitiesButton
-          class="w-full rounded-full from-secondary via-primary to-accent bg-gradient-to-br"
+          class="w-full rounded-full from-secondary via-primary to-accent bg-gradient-to-br md:w-[50vw] lg:w-[20vw]"
           label="See My Work"
           icon="ic:outline-arrow-downward"
           navigation-path="/#my-work"
@@ -33,7 +39,7 @@
       <section class="flex flex-col gap-y-[4vh] mb-[8vh]">
         <div class="flex flex-col gap-y-[8vh]">
           <div
-            class="w-full text-center text-primary text-heading-4 font-poppins"
+            class="w-full text-center text-primary text-heading-4 font-poppins lg:text-heading-2"
           >
             <h2>My Work</h2>
           </div>
@@ -87,13 +93,13 @@
         </div>
         <div id="my-work" class="flex flex-col gap-y-[4vh]">
           <div
-            class="w-full text-center text-primary text-heading-5 font-poppins"
+            class="w-full text-center text-primary text-heading-5 font-poppins lg:text-heading-4 lg:p-[1rem]"
           >
             <h3>Past projects</h3>
           </div>
-          <div>
+          <div class="flex flex-col gap-y-[4vh] lg:gap-y-[12vh]">
             <div
-              class="h-[30vh] bg-primary p-[1rem] w-full left-0 grid grid-cols-3 grid-rows-[1fr_0.5fr_1fr]"
+              class="h-[30vh] bg-primary p-[1rem] w-full left-0 grid grid-cols-3 grid-rows-[1fr_0.5fr_1fr] md:h-[40vh] lg:h-[80vh]"
             >
               <div class="col-start-2 col-span-2 row-start-1 row-span-2">
                 <img
@@ -110,10 +116,8 @@
                 />
               </div>
             </div>
-          </div>
-          <div>
             <div
-              class="h-[30vh] bg-black-50 p-[1rem] w-full left-0 grid grid-cols-2 grid-rows-1"
+              class="h-[30vh] bg-black-50 p-[1rem] w-full left-0 grid grid-cols-2 grid-rows-1 md:h-[40vh] lg:h-[80vh]"
             >
               <div class="">
                 <img
@@ -135,12 +139,16 @@
       </section>
       <section class="flex flex-col gap-y-[4vh] mb-[4rem]">
         <div
-          class="w-full text-center text-primary text-heading-4 font-poppins"
+          class="w-full text-center text-primary text-heading-4 font-poppins lg:text-heading-2 lg:p-[1rem]"
         >
           <h2>Contact Information</h2>
         </div>
-        <div class="flex flex-col gap-y-[4vh]">
-          <div class="flex flex-col gap-y-[2vh]">
+        <div
+          class="flex flex-col gap-y-[4vh] lg:grid lg:grid-cols-2 lg:grid-rows-2 gap-x-[8vw]"
+        >
+          <div
+            class="flex flex-col gap-y-[2vh] lg:col-start-1 lg:col-span-1 lg:row-start-1 lg:row-span-1"
+          >
             <div
               class="w-full text-center text-primary text-heading-5 font-lexend"
             >
@@ -156,12 +164,18 @@
               </p>
             </div>
           </div>
-          <UtilitiesButton
-            class="w-full rounded-full bg-accent"
-            label="Got a project in mind? Let's talk"
-            navigation-path="/contact"
-          />
-          <div class="flex flex-col gap-y-[2vh]">
+          <div
+            class="md:flex md:flex-col items-center lg:col-start-1 lg:col-span-1 lg:row-start-2 lg:row-span-1 lg:mt-[3vh]"
+          >
+            <UtilitiesButton
+              class="w-full rounded-full bg-accent md:w-[50vw] lg:w-[25vw]"
+              label="Got a project in mind? Let's talk"
+              navigation-path="/contact"
+            />
+          </div>
+          <div
+            class="flex flex-col gap-y-[2vh] md:mt-[2vh] lg:col-start-2 lg:col-span-1 lg:row-start-1 lg:row-span-1"
+          >
             <div
               class="w-full text-left text-primary text-heading-6 font-lexend"
             >
