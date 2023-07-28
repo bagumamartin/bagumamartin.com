@@ -44,6 +44,13 @@ export default defineNuxtConfig({
         },
         { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
       ],
+      script: [
+        // add google tag manager script here
+        {
+          src: `https://www.googletagmanager.com/gtag/js?id=${process.env.NUXT_PUBLIC_GTAG_ID}`,
+          async: true,
+        },
+      ],
     },
   },
 });
