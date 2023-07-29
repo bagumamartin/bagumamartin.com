@@ -1,7 +1,14 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ["@pinia/nuxt", "nuxt-icon", "nuxt-gtag"],
+  modules: [
+    "@pinia/nuxt",
+    "nuxt-icon",
+    "nuxt-gtag",
+    "nuxt-schema-org",
+    "nuxt-simple-robots",
+    "nuxt-simple-sitemap",
+  ],
   css: ["~/assets/style/main.scss"],
   postcss: {
     plugins: {
@@ -52,5 +59,8 @@ export default defineNuxtConfig({
         // },
       ],
     },
+  },
+  site: {
+    url: "https://www.bagumamartin.com",
   },
 });

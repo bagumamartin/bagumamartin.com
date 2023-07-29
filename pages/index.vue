@@ -332,4 +332,42 @@ const typingList = [
   "a Cybersecurity Analyst",
   "a Graphics Designer",
 ];
+
+// JSON-LD Schema Markup for SEO
+useSchemaOrg([
+  defineWebSite({
+    name: "Baguma Martin",
+    description: "Baguma Martin is is a software applications developer",
+  }),
+  definePerson({
+    name: "Baguma Martin Amanya",
+    logo: "https://www.bagumamartin.com/logo.png",
+    alternateName: "Baguma Martin",
+    nationality: "Ugandan",
+    birthPlace: definePlace({
+      PostalAddress: defineAddress({
+        addressLocality: "Hoima",
+        addressCountry: "Uganda",
+        addressRegion: "Western Uganda",
+      }),
+    }),
+    gender: "Male",
+    Description: ["Technologist", "Pharmacist"],
+    url: "https://www.bagumamartin.com",
+    image: "https://www.bagumamartin.com/images/profile.png",
+    address: defineAddress({
+      addressLocality: "Hoima",
+      addressCountry: "Uganda",
+      addressRegion: "Western Uganda",
+    }),
+    sameAs: [
+      "https://twitter.com/BagumaMartinA",
+      "https://www.instagram.com/bagumaamanya/",
+      "https://www.facebook.com/baguma.a.martinamanya",
+      "https://www.linkedin.com/in/baguma-martin-b924381a7/",
+      "https://github.com/bagumamartin",
+    ],
+  }),
+  defineWebPage(),
+]);
 </script>
