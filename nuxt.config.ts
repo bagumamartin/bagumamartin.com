@@ -29,6 +29,11 @@ export default defineNuxtConfig({
       },
     },
   },
+  nitro: {
+    prerender: {
+      crawlLinks: true,
+    },
+  },
   generate: {
     fallback: true, // Uses '404.html' instead of the default '200.html'
   },
