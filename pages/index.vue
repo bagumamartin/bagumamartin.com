@@ -11,9 +11,9 @@
           <h1 class="">Hello, I'm Baguma</h1>
         </div>
         <div
-          class="typer w-full text-left text-black text-[5vw] font-poppins lg:text-heading-1 lg:w-[70vw]"
+          class="typer w-full text-left text-black text-[5dvw] font-poppins lg:text-heading-1 lg:w-[70vw]"
         >
-          I am <span class="inline hidden">an applications developer.</span>
+          I am
           <UtilitiesTyper
             class="inline"
             :typing-list="typingList"
@@ -102,15 +102,15 @@
               class="h-[30vh] bg-primary p-[1rem] w-full left-0 grid grid-cols-3 grid-rows-[1fr_0.5fr_1fr] md:h-[40vh] lg:h-[80vh]"
             >
               <div class="col-start-2 col-span-2 row-start-1 row-span-2">
-                <img
-                  src="@/assets/images/pacedream_hero.png"
+                <nuxt-img
+                  src="/images/main/pacedream_hero.png"
                   alt="Screenshot image of Pacedream's website hero section"
                   class="w-full h-full object-contain"
                 />
               </div>
               <div class="col-start-1 col-span-2 row-start-2 row-span-3">
-                <img
-                  src="@/assets/images/pacedream_services_section.png"
+                <nuxt-img
+                  src="/images/main/pacedream_services_section.png"
                   alt="Screenshot image of Pacedream's website hero section"
                   class="w-full h-full object-contain"
                 />
@@ -120,15 +120,15 @@
               class="h-[30vh] bg-black-50 p-[1rem] w-full left-0 grid grid-cols-2 grid-rows-1 md:h-[40vh] lg:h-[80vh]"
             >
               <div class="">
-                <img
-                  src="@/assets/images/astromalls_splashscreen.jpg"
+                <nuxt-img
+                  src="/images/main/astromalls_splashscreen.jpg"
                   alt="Screenshot image of Pacedream's website hero section"
                   class="w-full h-full object-contain"
                 />
               </div>
               <div class="">
-                <img
-                  src="@/assets/images/astromalls_homepage.jpg"
+                <nuxt-img
+                  src="/images/main/astromalls_homepage.jpg"
                   alt="Screenshot image of Pacedream's website hero section"
                   class="w-full h-full object-contain"
                 />
