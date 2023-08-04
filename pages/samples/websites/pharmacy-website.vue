@@ -217,7 +217,7 @@
 <script setup>
 import { useShowMenuStore } from "@/stores/header/showMenuStore";
 import { useSearchStore } from "@/stores/header/searchStore";
-import { drugsList } from "./drugs";
+import { drugsList } from "@/assets/data/drugs";
 
 const storeShowMenu = useShowMenuStore();
 
