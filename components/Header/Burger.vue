@@ -14,14 +14,6 @@
 </template>
 
 <script setup>
-// export default {
-//   methods: {
-//     transformBurger() {
-//       this.showMenu = !this.showMenu;
-//     },
-//   },
-// };
-
 import { useShowMenuStore } from "@/stores/header/showMenuStore";
 
 const storeShowMenu = useShowMenuStore();

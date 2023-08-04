@@ -8,6 +8,7 @@ export default defineNuxtConfig({
     "nuxt-schema-org",
     "nuxt-simple-robots",
     "nuxt-simple-sitemap",
+    "nuxt-swiper",
   ],
   css: ["~/assets/style/main.scss"],
   postcss: {
@@ -44,7 +45,7 @@ export default defineNuxtConfig({
   app: {
     head: {
       htmlAttrs: {
-        lang: "en",
+        lang: "en_UG",
       },
       title:
         "Software Applications Development Services in Uganda | Hire a Professional Developer",
@@ -52,20 +53,17 @@ export default defineNuxtConfig({
         {
           hid: "canonical",
           rel: "canonical",
-          href: "https://www.bagumamartin.com",
+          href: "https://bagumamartin.com",
         },
-        { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
-      ],
-      script: [
-        // add google tag manager script here
-        // {
-        //   src: `https://www.googletagmanager.com/gtag/js?id=${process.env.NUXT_PUBLIC_GTAG_ID}`,
-        //   async: true,
-        // },
+        {
+          rel: "icon",
+          type: "image/x-icon",
+          href: "https://bagumamartin.com/favicon.ico",
+        },
       ],
     },
   },
   site: {
-    url: "https://www.bagumamartin.com",
+    url: "https://bagumamartin.com",
   },
 });

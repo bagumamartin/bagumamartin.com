@@ -15,3 +15,15 @@
     </div>
   </div>
 </template>
+
+<script setup>
+definePageMeta({
+  title: "Contact Baguma Martin",
+  description:
+    "Get in touch with me. I am experienced in various major programming languages, frameworks, and platforms. Connect to discuss your project requirements or collaborate on exciting opportunities.",
+  image: "/images/social_cards_image.jpg",
+  imageAlt:
+    "Photograph of a software developer's desk with a laptop connecter to a monitor.",
+  imageType: "image/jpeg",
+});
+</script>

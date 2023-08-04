@@ -15,3 +15,15 @@
     </div>
   </div>
 </template>
+
+<script setup>
+definePageMeta({
+  title: "Technologies I Use",
+  description:
+    "Explore the programming languages, frameworks, platforms, and tools I am proficient in. Discover the tools I use for robust solutions.",
+  image: "/images/social_cards_image.jpg",
+  imageAlt:
+    "Photograph of a software developer's desk with a laptop connecter to a monitor.",
+  imageType: "image/jpeg",
+});
+</script>

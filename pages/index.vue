@@ -179,7 +179,7 @@
             <div
               class="w-full text-left text-primary text-heading-6 font-lexend"
             >
-              <p>bagumamartin@bagumamartin.com</p>
+              <p>martin@bagumamartin.com</p>
             </div>
             <div class="w-full text-left text-black text-paragraph font-lexend">
               <p>+256 773 377 425</p>
@@ -193,135 +193,14 @@
 </template>
 
 <script setup lang="ts">
-// Head data for SEO
-useHead({
-  // Twitter card data for SEO
-  meta: [
-    {
-      hid: "description",
-      name: "description",
-      content:
-        "Looking for a professional application developer in Uganda? I offer a wide range of custom software development services, including website, mobile and desktop apps design and development. I am experienced in various major programming languages and platforms, and I can help you create applications that meets your specific needs. Hire me for your project today.",
-    },
-    {
-      hid: "twitter:card",
-      name: "twitter:card",
-      content: "summary_large_image",
-    },
-    { hid: "twitter:site", name: "twitter:site", content: "@BagumaMartinA" },
-    {
-      hid: "twitter:creator",
-      name: "twitter:creator",
-      content: "@BagumaMartinA",
-    },
-    {
-      hid: "twitter:title",
-      name: "twitter:title",
-      content:
-        "Software Applications Development Services in Uganda | Hire a Professional Developer",
-    },
-    {
-      hid: "twitter:description",
-      name: "twitter:description",
-      content:
-        "Looking for a professional application developer in Uganda? I offer a wide range of custom software development services, including website, mobile and desktop apps design and development. I am experienced in various major programming languages and platforms, and I can help you create applications that meets your specific needs. Hire me for your project today.",
-    },
-    {
-      hid: "twitter:image",
-      name: "twitter:image",
-      content: "https://bagumamartin.com/images/social_cards_image.jpg",
-    },
-    {
-      hid: "twitter:url",
-      name: "twitter:url",
-      content: "https://www.bagumamartin.com",
-    },
-
-    // Open graph tag for SEO
-    {
-      hid: "og:site_name",
-      property: "og:site_name",
-      content: "Baguma Martin | Applications Developer",
-    },
-    {
-      hid: "og:title",
-      property: "og:title",
-      content:
-        "Software Applications Development Services in Uganda | Hire a Professional Developer",
-    },
-    { hid: "og:type", property: "og:type", content: "website" },
-    {
-      hid: "og:description",
-      property: "og:description",
-      content:
-        "Looking for a professional application developer in Uganda? I offer a wide range of custom software development services, including website, mobile and desktop apps design and development. I am experienced in various major programming languages and platforms, and I can help you create applications that meets your specific needs. Hire me for your project today.",
-    },
-    {
-      hid: "og:image",
-      property: "og:image",
-      content: "https://bagumamartin.com/images/social_cards_image.jpg",
-    },
-    {
-      hid: "og:image:secure_url",
-      property: "og:image:secure_url",
-      content: "https://bagumamartin.com/images/social_cards_image.jpg",
-    },
-    {
-      hid: "og:image:alt",
-      property: "og:image:alt",
-      content:
-        "Photograph of a software developer's desk with a laptop connecter to a monitor.",
-    },
-    {
-      hid: "og:image:type",
-      property: "og:image:type",
-      content: "image/jpeg",
-    },
-    {
-      hid: "og:image:width",
-      property: "og:image:width",
-      content: "1200",
-    },
-    {
-      hid: "og:image:height",
-      property: "og:image:height",
-      content: "630",
-    },
-    {
-      hid: "og:url",
-      property: "og:url",
-      content: "https://www.bagumamartin.com",
-    },
-
-    // Microsoft tiles
-    {
-      hid: "msapplication-TileColor",
-      name: "msapplication-TileColor",
-      content: "#DC143C",
-    },
-    {
-      hid: "msapplication-TileImage",
-      name: "msapplication-TileImage",
-      content: "https://bagumamartin.com/images/social_cards_image.jpg",
-    },
-    {
-      hid: "theme-color",
-      name: "theme-color",
-      content: "#DC143C",
-    },
-  ],
-  link: [
-    {
-      hid: "canonical",
-      rel: "canonical",
-      href: "https://www.bagumamartin.com",
-    },
-    {
-      itemprop: "thumbnailUrl",
-      href: "https://bagumamartin.com/images/social_cards_image.jpg",
-    },
-  ],
-  title: "Software Applications Development Services in Uganda",
+definePageMeta({
+  title: "Software Applications Developer",
+  description:
+    "Looking for a professional applications developer in Uganda? I develop a wide range of custom software applications that meet your specific needs - website, mobile and desktop apps design and development. Hire me for your project today.",
+  image: "/images/social_cards_image.jpg",
+  imageAlt:
+    "Photograph of a software developer's desk with a laptop connecter to a monitor.",
+  imageType: "image/jpeg",
 });
 
 // Typing list for the typer component

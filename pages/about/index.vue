@@ -15,3 +15,14 @@
     </div>
   </div>
 </template>
+
+<script setup>
+definePageMeta({
+  title: "About Baguma Martin",
+  description:
+    "Get to know more about me as an applications developer. Learn about my background, skills, projects, and passion for creating innovative solutions",
+  image: "/images/profile.png",
+  imageAlt: "Profile photograph of Baguma Martin",
+  imageType: "image/png",
+});
+</script>
