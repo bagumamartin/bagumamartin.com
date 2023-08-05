@@ -1,6 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
+  sourcemap: true,
   modules: [
     "@pinia/nuxt",
     "nuxt-icon",
@@ -10,6 +11,8 @@ export default defineNuxtConfig({
     "nuxt-simple-sitemap",
     "nuxt-swiper",
     "@nuxt/image",
+    "nuxt-delay-hydration",
+    "@nuxtjs/partytown",
   ],
   css: ["~/assets/style/main.scss"],
   postcss: {
@@ -43,6 +46,9 @@ export default defineNuxtConfig({
     id: process.env.NUXT_PUBLIC_GTAG_ID,
     initialConsent: true,
   },
+  partytown: {
+    forward: ["dataLayer.push"],
+  },
   app: {
     head: {
       htmlAttrs: {
@@ -69,5 +75,10 @@ export default defineNuxtConfig({
   },
   image: {
     format: ["webp"],
+  },
+  delayHydration: {
+    mode: "mount",
+    // enables nuxt-delay-hydration in dev mode for testing
+    debug: process.env.NODE_ENV === "development",
   },
 });

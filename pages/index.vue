@@ -107,6 +107,8 @@
                   alt="Screenshot image of Pacedream's website hero section"
                   format="webp"
                   loading="lazy"
+                  fit="cover"
+                  sizes="sm:100svw md:70svw lg:50svw"
                   class="w-full h-full object-contain"
                 />
               </div>
@@ -116,6 +118,8 @@
                   alt="Screenshot image of Pacedream's website hero section"
                   format="webp"
                   loading="lazy"
+                  fit="cover"
+                  sizes="sm:100svw md:70svw lg:50svw"
                   class="w-full h-full object-contain"
                 />
               </div>
@@ -129,6 +133,8 @@
                   alt="Screenshot image of Pacedream's website hero section"
                   format="webp"
                   loading="lazy"
+                  fit="cover"
+                  sizes="sm:100svw md:70svw lg:50svw"
                   class="w-full h-full object-contain"
                 />
               </div>
@@ -138,6 +144,8 @@
                   alt="Screenshot image of Pacedream's website hero section"
                   format="webp"
                   loading="lazy"
+                  fit="cover"
+                  sizes="sm:100svw md:70svw lg:50svw"
                   class="w-full h-full object-contain"
                 />
               </div>
