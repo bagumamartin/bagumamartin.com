@@ -79,8 +79,7 @@ export default defineNuxtConfig({
     format: ["webp"],
   },
   delayHydration: {
-    mode: "manual",
-    include: ["/samples/**"],
+    mode: "mount",
     hydrateOnEvents: [
       "mousemove",
       "scroll",
@@ -89,7 +88,7 @@ export default defineNuxtConfig({
       "touchstart",
       "wheel",
     ],
-    idleCallbackTimeout: 4000,
+    idleCallbackTimeout: 7000,
     // enables nuxt-delay-hydration in dev mode for testing
     debug: process.env.NODE_ENV === "development",
   },
