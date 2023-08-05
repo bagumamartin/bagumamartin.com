@@ -235,7 +235,7 @@ useHead({
     {
       hid: "og:url",
       property: "og:url",
-      content: `${baseURI}`,
+      content: `${baseURI}${route.fullPath}`,
     },
 
     // Microsoft tiles

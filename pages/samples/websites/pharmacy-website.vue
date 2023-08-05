@@ -229,7 +229,7 @@ definePageMeta({
   title: "Pharmacy website template sample",
   description:
     "This is a sample template of a pharmacy website built with NuxtJs and Tailwind CSS. It would enable your clients seamlessly browse health products, and pharmacy services you have to offer while ensuring that they experience convenience at its best.",
-  image: "/images/pharmacy_wev_sample_logo.png",
+  image: "/images/pharmacy_web_sample_logo.png",
   imageAlt: "Picture demonstrating a generic logo of a commercial pharmacy.",
   imageType: "image/png",
 });
