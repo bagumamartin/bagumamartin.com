@@ -14,7 +14,7 @@ export default defineNuxtConfig({
     "nuxt-delay-hydration",
     "@nuxtjs/partytown",
     "@nuxtjs/google-fonts",
-    "nuxt-purgecss",
+    // "nuxt-purgecss",
   ],
   css: ["~/assets/style/main.scss"],
   postcss: {
@@ -107,9 +107,9 @@ export default defineNuxtConfig({
       },
     },
   },
-  purgeCSS: {
-    enabled: true, // Always enable purgecss
-    mode: "postcss",
-    // safelist: ['my-class'], // Add my-class token to the safelist (e.g. .my-class)
-  },
+  // purgeCSS: {
+  //   enabled: true, // Always enable purgecss
+  //   mode: "postcss",
+  //   // safelist: ['my-class'], // Add my-class token to the safelist (e.g. .my-class)
+  // },
 });
