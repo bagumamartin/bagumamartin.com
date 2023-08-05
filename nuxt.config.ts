@@ -13,6 +13,8 @@ export default defineNuxtConfig({
     "@nuxt/image",
     "nuxt-delay-hydration",
     "@nuxtjs/partytown",
+    "@nuxtjs/google-fonts",
+    "nuxt-purgecss",
   ],
   css: ["~/assets/style/main.scss"],
   postcss: {
@@ -77,8 +79,37 @@ export default defineNuxtConfig({
     format: ["webp"],
   },
   delayHydration: {
-    mode: "mount",
+    mode: "manual",
+    include: ["/samples/**"],
+    hydrateOnEvents: [
+      "mousemove",
+      "scroll",
+      "keydown",
+      "click",
+      "touchstart",
+      "wheel",
+    ],
+    idleCallbackTimeout: 4000,
     // enables nuxt-delay-hydration in dev mode for testing
     debug: process.env.NODE_ENV === "development",
+  },
+  googleFonts: {
+    download: true,
+    base64: true,
+    overwriting: false,
+    families: {
+      Poppins: {
+        wght: [100, 200, 300, 400, 500, 600, 700, 800, 900],
+        ital: [100, 200, 300, 400, 500, 600, 700, 800, 900],
+      },
+      Lexend: {
+        wght: [100, 200, 300, 400, 500, 600, 700, 800, 900],
+      },
+    },
+  },
+  purgeCSS: {
+    enabled: true, // Always enable purgecss
+    mode: "postcss",
+    // safelist: ['my-class'], // Add my-class token to the safelist (e.g. .my-class)
   },
 });

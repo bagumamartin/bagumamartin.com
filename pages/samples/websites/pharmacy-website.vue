@@ -132,68 +132,82 @@
         </header>
       </section>
       <section class="px-[8dvw] flex flex-col gap-y-[2dvh]">
-        <div class="flex flex-col gap-y-[2dvh]">
-          <div class="">
-            <Swiper
-              :modules="[SwiperAutoplay]"
-              :slides-per-view="1.4"
-              :centered-slides="true"
-              :space-between="16"
-              :loop="true"
-              :autoplay="{
-                delay: 8000,
-                disableOnInteraction: false,
-              }"
-              class="h-[19vh]"
-            >
-              <SwiperSlide v-for="slide in 10" :key="slide" class="bg-red-500">
-                <strong>{{ slide }}</strong>
-              </SwiperSlide>
-            </Swiper>
+        <DelayHydration>
+          <div class="flex flex-col gap-y-[2dvh]">
+            <div class="">
+              <Swiper
+                :modules="[SwiperAutoplay]"
+                :slides-per-view="1.4"
+                :centered-slides="true"
+                :space-between="16"
+                :loop="true"
+                :autoplay="{
+                  delay: 8000,
+                  disableOnInteraction: false,
+                }"
+                class="h-[19vh]"
+              >
+                <SwiperSlide
+                  v-for="slide in 10"
+                  :key="slide"
+                  class="bg-red-500"
+                >
+                  <strong>{{ slide }}</strong>
+                </SwiperSlide>
+              </Swiper>
+            </div>
+            <div class="">
+              <Swiper
+                :modules="[SwiperAutoplay]"
+                :slides-per-view="4"
+                :breakpoints="{
+                  600: { slidesPerView: 5 },
+                  900: { slidesPerView: 7 },
+                }"
+                :space-between="16"
+                :loop="true"
+                :autoplay="{
+                  delay: 8000,
+                  disableOnInteraction: false,
+                }"
+                class="h-[8.5vh]"
+              >
+                <SwiperSlide
+                  v-for="slide in 10"
+                  :key="slide"
+                  class="bg-red-500"
+                >
+                  <strong>{{ slide }}</strong>
+                </SwiperSlide>
+              </Swiper>
+            </div>
+            <div class="">
+              <Swiper
+                :modules="[SwiperAutoplay]"
+                :slides-per-view="4"
+                :breakpoints="{
+                  600: { slidesPerView: 5 },
+                  900: { slidesPerView: 7 },
+                }"
+                :space-between="16"
+                :loop="true"
+                :autoplay="{
+                  delay: 8000,
+                  disableOnInteraction: false,
+                }"
+                class="h-[8.5vh]"
+              >
+                <SwiperSlide
+                  v-for="slide in 10"
+                  :key="slide"
+                  class="bg-red-500"
+                >
+                  <strong>{{ slide }}</strong>
+                </SwiperSlide>
+              </Swiper>
+            </div>
           </div>
-          <div class="">
-            <Swiper
-              :modules="[SwiperAutoplay]"
-              :slides-per-view="4"
-              :breakpoints="{
-                600: { slidesPerView: 5 },
-                900: { slidesPerView: 7 },
-              }"
-              :space-between="16"
-              :loop="true"
-              :autoplay="{
-                delay: 8000,
-                disableOnInteraction: false,
-              }"
-              class="h-[8.5vh]"
-            >
-              <SwiperSlide v-for="slide in 10" :key="slide" class="bg-red-500">
-                <strong>{{ slide }}</strong>
-              </SwiperSlide>
-            </Swiper>
-          </div>
-          <div class="">
-            <Swiper
-              :modules="[SwiperAutoplay]"
-              :slides-per-view="4"
-              :breakpoints="{
-                600: { slidesPerView: 5 },
-                900: { slidesPerView: 7 },
-              }"
-              :space-between="16"
-              :loop="true"
-              :autoplay="{
-                delay: 8000,
-                disableOnInteraction: false,
-              }"
-              class="h-[8.5vh]"
-            >
-              <SwiperSlide v-for="slide in 10" :key="slide" class="bg-red-500">
-                <strong>{{ slide }}</strong>
-              </SwiperSlide>
-            </Swiper>
-          </div>
-        </div>
+        </DelayHydration>
         <div class="grid grid-col-2 grid-row-2 gap-[1dvh] h-[42dvh]">
           <div class="bg-red-500 col-start-1 col-span-1 row-start-1 row-span-1">
             1

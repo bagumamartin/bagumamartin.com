@@ -24,31 +24,31 @@ module.exports = {
     },
     fontSize: {
       'heading-1': ['3.052rem', {
-        lineHeight: '96px',
+        lineHeight: '6rem',
         fontWeight: '800',
       }],
       'heading-2': ['2.441rem', {
-        lineHeight: '72px',
+        lineHeight: '4.5rem',
         fontWeight: '700',
       }],
       'heading-3': ['1.953rem', {
-        lineHeight: '48px',
+        lineHeight: '3rem',
         fontWeight: '300',
       }],
       'heading-4': ['1.563rem', {
-        lineHeight: '32px',
+        lineHeight: '2rem',
         fontWeight: '600',
       }],
       'heading-5': ['1.25rem', {
-        lineHeight: '24px',
+        lineHeight: '1.5rem',
         fontWeight: '500',
       }],
       'heading-6': ['1rem', {
-        lineHeight: '16px',
+        lineHeight: '1rem',
         fontWeight: '500',
       }],
       'paragraph': ['1rem', {
-        lineHeight: '24px',
+        lineHeight: '2rem',
         fontWeight: '300',
       }]
     },

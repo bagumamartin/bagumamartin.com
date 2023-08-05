@@ -115,7 +115,7 @@
               <div class="col-start-1 col-span-2 row-start-2 row-span-3">
                 <nuxt-img
                   src="/images/main/pacedream_services_section.png"
-                  alt="Screenshot image of Pacedream's website hero section"
+                  alt="Screenshot image of Pacedream's services section"
                   format="webp"
                   loading="lazy"
                   fit="cover"
@@ -130,7 +130,7 @@
               <div class="">
                 <nuxt-img
                   src="/images/main/astromalls_splashscreen.jpg"
-                  alt="Screenshot image of Pacedream's website hero section"
+                  alt="Screenshot image of astromall's splash screen"
                   format="webp"
                   loading="lazy"
                   fit="cover"
@@ -141,7 +141,7 @@
               <div class="">
                 <nuxt-img
                   src="/images/main/astromalls_homepage.jpg"
-                  alt="Screenshot image of Pacedream's website hero section"
+                  alt="Screenshot image of astromall's landing section"
                   format="webp"
                   loading="lazy"
                   fit="cover"
