@@ -105,6 +105,8 @@
                 <nuxt-img
                   src="/images/main/pacedream_hero.png"
                   alt="Screenshot image of Pacedream's website hero section"
+                  format="webp"
+                  loading="lazy"
                   class="w-full h-full object-contain"
                 />
               </div>
@@ -112,6 +114,8 @@
                 <nuxt-img
                   src="/images/main/pacedream_services_section.png"
                   alt="Screenshot image of Pacedream's website hero section"
+                  format="webp"
+                  loading="lazy"
                   class="w-full h-full object-contain"
                 />
               </div>
@@ -123,6 +127,8 @@
                 <nuxt-img
                   src="/images/main/astromalls_splashscreen.jpg"
                   alt="Screenshot image of Pacedream's website hero section"
+                  format="webp"
+                  loading="lazy"
                   class="w-full h-full object-contain"
                 />
               </div>
@@ -130,6 +136,8 @@
                 <nuxt-img
                   src="/images/main/astromalls_homepage.jpg"
                   alt="Screenshot image of Pacedream's website hero section"
+                  format="webp"
+                  loading="lazy"
                   class="w-full h-full object-contain"
                 />
               </div>

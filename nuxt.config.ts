@@ -46,7 +46,7 @@ export default defineNuxtConfig({
   app: {
     head: {
       htmlAttrs: {
-        lang: "en_UG",
+        lang: "en",
       },
       title:
         "Software Applications Development Services in Uganda | Hire a Professional Developer",
@@ -66,5 +66,8 @@ export default defineNuxtConfig({
   },
   site: {
     url: "https://bagumamartin.com",
+  },
+  image: {
+    format: ["webp"],
   },
 });
