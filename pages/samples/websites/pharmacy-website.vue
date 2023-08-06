@@ -138,29 +138,30 @@
           <NuxtLazyHydrate when-visible>
             <div class="flex flex-col gap-y-[2dvh]">
               <div class="">
-                <Swiper
+                <LazySwiper
                   :modules="[SwiperAutoplay]"
                   :slides-per-view="1.4"
                   :centered-slides="true"
                   :space-between="16"
                   :loop="true"
+                  :lazy="true"
                   :autoplay="{
                     delay: 8000,
                     disableOnInteraction: false,
                   }"
                   class="h-[19vh]"
                 >
-                  <SwiperSlide
+                  <LazySwiperSlide
                     v-for="slide in 10"
                     :key="slide"
                     class="bg-red-500"
                   >
                     <strong>{{ slide }}</strong>
-                  </SwiperSlide>
-                </Swiper>
+                  </LazySwiperSlide>
+                </LazySwiper>
               </div>
               <div class="">
-                <Swiper
+                <LazySwiper
                   :modules="[SwiperAutoplay]"
                   :slides-per-view="4"
                   :breakpoints="{
@@ -169,23 +170,24 @@
                   }"
                   :space-between="16"
                   :loop="true"
+                  :lazy="true"
                   :autoplay="{
                     delay: 8000,
                     disableOnInteraction: false,
                   }"
                   class="h-[8.5vh]"
                 >
-                  <SwiperSlide
+                  <LazySwiperSlide
                     v-for="slide in 10"
                     :key="slide"
                     class="bg-red-500"
                   >
                     <strong>{{ slide }}</strong>
-                  </SwiperSlide>
-                </Swiper>
+                  </LazySwiperSlide>
+                </LazySwiper>
               </div>
               <div class="">
-                <Swiper
+                <LazySwiper
                   :modules="[SwiperAutoplay]"
                   :slides-per-view="4"
                   :breakpoints="{
@@ -194,20 +196,21 @@
                   }"
                   :space-between="16"
                   :loop="true"
+                  :lazy="true"
                   :autoplay="{
                     delay: 8000,
                     disableOnInteraction: false,
                   }"
                   class="h-[8.5vh]"
                 >
-                  <SwiperSlide
+                  <LazySwiperSlide
                     v-for="slide in 10"
                     :key="slide"
                     class="bg-red-500"
                   >
                     <strong>{{ slide }}</strong>
-                  </SwiperSlide>
-                </Swiper>
+                  </LazySwiperSlide>
+                </LazySwiper>
               </div>
             </div>
           </NuxtLazyHydrate>

@@ -10,15 +10,15 @@
 <script setup>
 import { useTyperStore } from "@/stores/typer/typerStore";
 
-const props = defineProps(["typingList", "cursorColor"]);
+const props = defineProps(["typingList", "initialContentIndex", "cursorColor"]);
 const cursorColor = props.cursorColor || "red";
 
 const storeTyper = useTyperStore();
-storeTyper.init(props.typingList);
+storeTyper.init(props.typingList, props.initialContentIndex);
 // storeTyper.typeText();
 
 onMounted(() => {
-  storeTyper.typeText();
+  storeTyper.eraseText();
   //   setTimeout(storeTyper.typeText, storeTyper.newTextDelay);
 });
 </script>

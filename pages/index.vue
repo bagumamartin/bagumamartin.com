@@ -15,11 +15,13 @@
             class="typer w-full text-left text-black text-[5dvw] font-poppins lg:text-heading-1 lg:w-[70vw]"
           >
             I am
-            <UtilitiesTyper
-              class="inline"
-              :typing-list="typingList"
-              cursor-color="primary"
-            />
+            <NuxtLazyHydrate when-idle>
+              <UtilitiesTyper
+                class="inline"
+                :typing-list="typingList"
+                :initial-content-index="0"
+                cursor-color="primary"
+            /></NuxtLazyHydrate>
           </div>
           <div
             class="w-full text-center text-black text-paragraph font-lexend lg:w-[50vw]"

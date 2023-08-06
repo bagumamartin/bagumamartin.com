@@ -81,7 +81,7 @@ export default defineNuxtConfig({
     display: "swap",
     download: true,
     inject: true,
-    preload: true,
+    // preload: true,
     base64: true,
     overwriting: false,
     families: {

@@ -2,21 +2,23 @@ import { defineStore } from 'pinia'
 
 export const useTyperStore = defineStore('typer', {
     state: () => ({
-        content: '',
+        content: 'an Applications Developer',
         typeStatus: true,
         typingList: [],
         typingSpeed: 200,
         erasingSpeed: 100,
         newTextDelay: 2500,
         typeAttributesIndex: 0,
-        charIndex: 0,
+        charIndex: 24,
     }),
     getters: {
         type: (state) => state.content * 2,
     },
     actions: {
-        init(typingList) {
+        init(typingList, initialContentIndex) {
             this.typingList = typingList;
+            this.content = typingList.at(initialContentIndex);
+            this.charIndex = (typingList.at(initialContentIndex).length) - 1;
         },
         typeText() {
             if (

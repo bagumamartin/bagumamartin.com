@@ -1,7 +1,9 @@
 <template>
   <div>
     <NuxtLayout>
-      <NuxtPage />
+      <NuxtLazyHydrate when-visible>
+        <NuxtPage />
+      </NuxtLazyHydrate>
     </NuxtLayout>
   </div>
 </template>
