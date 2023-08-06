@@ -139,7 +139,7 @@ useHead({
       name: "twitter:title",
       content: () => {
         return route.meta.title
-          ? `${route.meta.title}`
+          ? `${route.meta.title}  | Hire a Professional Developer`
           : "Software Applications Developer | Hire a Professional Developer";
       },
     },
@@ -178,7 +178,7 @@ useHead({
       property: "og:title",
       content: () => {
         return route.meta.title
-          ? `${route.meta.title}`
+          ? `${route.meta.title}  | Hire a Professional Developer`
           : "Software Applications Developer | Hire a Professional Developer";
       },
     },

@@ -1,8 +1,10 @@
 <template>
   <div id="app-layout">
-    <main>
-      <slot />
-    </main>
+    <NuxtLazyHydrate when-visible>
+      <main>
+        <slot />
+      </main>
+    </NuxtLazyHydrate>
   </div>
 </template>
 
@@ -59,7 +61,7 @@ useHead({
       name: "twitter:title",
       content: () => {
         return route.meta.title
-          ? `${route.meta.title}`
+          ? `${route.meta.title}  | Hire a Professional Developer`
           : "Application template sample | Hire a Professional Developer";
       },
     },
@@ -98,7 +100,7 @@ useHead({
       property: "og:title",
       content: () => {
         return route.meta.title
-          ? `${route.meta.title}`
+          ? `${route.meta.title}  | Hire a Professional Developer`
           : "Software Applications Developer | Hire a Professional Developer";
       },
     },

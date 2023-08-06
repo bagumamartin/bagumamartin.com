@@ -14,6 +14,7 @@ export default defineNuxtConfig({
     "@nuxtjs/partytown",
     "@nuxtjs/google-fonts",
     "nuxt-lazy-hydrate",
+    "nuxt-delay-hydration",
   ],
   css: ["~/assets/style/main.scss"],
   postcss: {
@@ -81,7 +82,7 @@ export default defineNuxtConfig({
     display: "swap",
     download: true,
     inject: true,
-    // preload: true,
+    preload: true,
     base64: true,
     overwriting: false,
     families: {
@@ -93,5 +94,10 @@ export default defineNuxtConfig({
         wght: [100, 200, 300, 400, 500, 600, 700, 800, 900],
       },
     },
+  },
+  delayHydration: {
+    mode: "mount",
+    // enables nuxt-delay-hydration in dev mode for testing
+    debug: process.env.NODE_ENV === "development",
   },
 });
