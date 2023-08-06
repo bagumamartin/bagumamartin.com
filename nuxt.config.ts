@@ -11,10 +11,9 @@ export default defineNuxtConfig({
     "nuxt-simple-sitemap",
     "nuxt-swiper",
     "@nuxt/image",
-    "nuxt-delay-hydration",
     "@nuxtjs/partytown",
     "@nuxtjs/google-fonts",
-    // "nuxt-purgecss",
+    "nuxt-lazy-hydrate",
   ],
   css: ["~/assets/style/main.scss"],
   postcss: {
@@ -44,12 +43,12 @@ export default defineNuxtConfig({
   generate: {
     fallback: true, // Uses '404.html' instead of the default '200.html'
   },
+  partytown: {
+    forward: ["dataLayer.push"],
+  },
   gtag: {
     id: process.env.NUXT_PUBLIC_GTAG_ID,
     initialConsent: true,
-  },
-  partytown: {
-    forward: ["dataLayer.push"],
   },
   app: {
     head: {
@@ -78,20 +77,20 @@ export default defineNuxtConfig({
   image: {
     format: ["webp"],
   },
-  delayHydration: {
-    mode: "mount",
-    hydrateOnEvents: [
-      "mousemove",
-      "scroll",
-      "keydown",
-      "click",
-      "touchstart",
-      "wheel",
-    ],
-    idleCallbackTimeout: 7000,
-    // enables nuxt-delay-hydration in dev mode for testing
-    debug: process.env.NODE_ENV === "development",
-  },
+  // delayHydration: {
+  //   mode: "mount",
+  //   hydrateOnEvents: [
+  //     "mousemove",
+  //     "scroll",
+  //     "keydown",
+  //     "click",
+  //     "touchstart",
+  //     "wheel",
+  //   ],
+  //   idleCallbackTimeout: 7000,
+  //   // enables nuxt-delay-hydration in dev mode for testing
+  //   debug: process.env.NODE_ENV === "development",
+  // },
   googleFonts: {
     download: true,
     base64: true,
@@ -106,9 +105,4 @@ export default defineNuxtConfig({
       },
     },
   },
-  // purgeCSS: {
-  //   enabled: true, // Always enable purgecss
-  //   mode: "postcss",
-  //   // safelist: ['my-class'], // Add my-class token to the safelist (e.g. .my-class)
-  // },
 });

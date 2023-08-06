@@ -132,7 +132,7 @@
         </header>
       </section>
       <section class="px-[8dvw] flex flex-col gap-y-[2dvh]">
-        <DelayHydration>
+        <NuxtLazyHydrate when-idle>
           <div class="flex flex-col gap-y-[2dvh]">
             <div class="">
               <Swiper
@@ -207,7 +207,7 @@
               </Swiper>
             </div>
           </div>
-        </DelayHydration>
+        </NuxtLazyHydrate>
         <div class="grid grid-col-2 grid-row-2 gap-[1dvh] h-[42dvh]">
           <div class="bg-red-500 col-start-1 col-span-1 row-start-1 row-span-1">
             1
