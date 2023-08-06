@@ -9,12 +9,12 @@ export default defineNuxtConfig({
     "nuxt-schema-org",
     "nuxt-simple-robots",
     "nuxt-simple-sitemap",
-    "nuxt-swiper",
     "@nuxt/image",
     "@nuxtjs/partytown",
     "@nuxtjs/google-fonts",
     "nuxt-lazy-hydrate",
     "nuxt-delay-hydration",
+    "nuxt-swiper",
   ],
   css: ["~/assets/style/main.scss"],
   postcss: {
@@ -43,6 +43,9 @@ export default defineNuxtConfig({
   },
   generate: {
     fallback: true, // Uses '404.html' instead of the default '200.html'
+  },
+  render: {
+    resourceHints: false,
   },
   partytown: {
     forward: ["dataLayer.push"],
