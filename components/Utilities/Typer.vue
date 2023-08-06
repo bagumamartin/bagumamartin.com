@@ -15,12 +15,12 @@ const cursorColor = props.cursorColor || "red";
 
 const storeTyper = useTyperStore();
 storeTyper.init(props.typingList);
-storeTyper.typeText();
+// storeTyper.typeText();
 
-// onMounted(() => {
-//   storeTyper.typeText();
-//   //   setTimeout(storeTyper.typeText, storeTyper.newTextDelay);
-// });
+onMounted(() => {
+  storeTyper.typeText();
+  //   setTimeout(storeTyper.typeText, storeTyper.newTextDelay);
+});
 </script>
 
 <style scoped lang="scss">

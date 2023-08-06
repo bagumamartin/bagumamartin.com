@@ -1,19 +1,19 @@
 <template>
   <div>
-    <section class="h-[10vh] bg-black-500 lg:h-[15vh]">
+    <section class="sticky top-0 bg-black-500 lg:h-[15vh]">
       <header
-        class="w-full h-[10vh] py-[0.5rem] px-[2rem] flex justify-between items-center fixed bg-white lg:h-[15vh] lg:px-[4rem]"
+        class="w-full h-[10vh] py-[0.5rem] px-[2rem] flex justify-between items-center bg-white lg:h-[15vh] lg:px-[4rem]"
       >
         <NuxtLink to="/" @click="storeShowMenu.closeMenu">
           <HeaderLogo class="w-[2.0625rem] h-[1.9925rem] fill-[#DC143C]" />
         </NuxtLink>
         <HeaderBurger class="absolute right-[2rem] z-[9999] sm:hidden" />
         <nav
-          class="h-[100vh] pt-[10vh] inset-[0_0_0_30%] bg-black-50 backdrop-blur-[1.5rem] fixed transition-[all_1s_ease-in-out] md:w-full md:h-full md:translate-x-0 md:pt-0 md:inset-auto md:static md:bg-transparent md:backdrop-blur-0 md:transition-none md:inset-auto"
+          class="h-[100vh] pt-[10vh] inset-[0_0_0_30%] bg-black-50 backdrop-blur-[1.5rem] fixed transition-[all_1s_ease-in-out] sm:w-full sm:h-full sm:translate-x-0 sm:pt-0 sm:inset-auto sm:static sm:bg-transparent sm:backdrop-blur-0 sm:transition-none sm:inset-auto"
           :class="storeShowMenu.showMenu ? 'translate-x-0' : 'translate-x-full'"
         >
           <div
-            class="h-full pl-[20vw] text-left text-heading-5 text-primary font-poppins flex flex-col gap-y-[3vh] justify-start md:w-full md:flex-row md:justify-end md:items-center md:gap-x-[4vw] md:pl-0"
+            class="h-full pl-[20vw] text-left text-heading-5 text-primary font-poppins flex flex-col gap-y-[3vh] justify-start sm:w-full sm:flex-row sm:justify-end sm:items-center sm:gap-x-[4vw] sm:pl-0"
           >
             <NuxtLink to="/" @click="storeShowMenu.closeMenu"> Home </NuxtLink>
             <NuxtLink to="/services" @click="storeShowMenu.closeMenu">
@@ -34,9 +34,11 @@
     </section>
     <section>
       <div><hr /></div>
-      <div>
-        <slot />
-      </div>
+      <main>
+        <NuxtLazyHydrate when-visible>
+          <slot />
+        </NuxtLazyHydrate>
+      </main>
       <div><hr /></div>
     </section>
     <footer>

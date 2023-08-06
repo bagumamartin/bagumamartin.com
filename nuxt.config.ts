@@ -79,6 +79,8 @@ export default defineNuxtConfig({
   },
   googleFonts: {
     download: true,
+    inject: true,
+    preload: true,
     base64: true,
     overwriting: false,
     families: {
