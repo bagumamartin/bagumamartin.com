@@ -77,20 +77,6 @@ export default defineNuxtConfig({
   image: {
     format: ["webp"],
   },
-  // delayHydration: {
-  //   mode: "mount",
-  //   hydrateOnEvents: [
-  //     "mousemove",
-  //     "scroll",
-  //     "keydown",
-  //     "click",
-  //     "touchstart",
-  //     "wheel",
-  //   ],
-  //   idleCallbackTimeout: 7000,
-  //   // enables nuxt-delay-hydration in dev mode for testing
-  //   debug: process.env.NODE_ENV === "development",
-  // },
   googleFonts: {
     download: true,
     base64: true,
