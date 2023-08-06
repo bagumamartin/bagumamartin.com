@@ -1,0 +1,93 @@
+{
+    "adverts": [
+        {
+            "id": 1,
+            "imagePath": "images/samples/websites/pharmacy_website/pharmacist_on_shelves.png"
+        },
+        {
+            "id": 2,
+            "imagePath": "images/samples/websites/pharmacy_website/drug_in_heart_design.png"
+        },
+        {
+            "id": 3,
+            "imagePath": "images/samples/websites/pharmacy_website/drugs_display_with_twizzers.png"
+        },
+        {
+            "id": 4,
+            "imagePath": "images/samples/websites/pharmacy_website/pharmacy_store.png"
+        },
+        {
+            "id": 5,
+            "imagePath": "images/samples/websites/pharmacy_website/pharmacy_view.png"
+        },
+        {
+            "id": 6,
+            "imagePath": "images/samples/websites/pharmacy_website/pharmacy_view_2.png"
+        }
+    ],
+    "products": [
+        {
+            "id": 1,
+            "imagePath": "images/samples/websites/pharmacy_website/cream.png"
+        },
+        {
+            "id": 2,
+            "imagePath": "images/samples/websites/pharmacy_website/herbal_vitamins.png"
+        },
+        {
+            "id": 3,
+            "imagePath": "images/samples/websites/pharmacy_website/liquid_vials.png"
+        },
+        {
+            "id": 4,
+            "imagePath": "images/samples/websites/pharmacy_website/natura_medicine_pills.png"
+        },
+        {
+            "id": 5,
+            "imagePath": "images/samples/websites/pharmacy_website/pills.png"
+        },
+        {
+            "id": 6,
+            "imagePath": "images/samples/websites/pharmacy_website/pills_from_container.png"
+        },
+        {
+            "id": 7,
+            "imagePath": "images/samples/websites/pharmacy_website/pills_from_container_2.png"
+        },
+        {
+            "id": 8,
+            "imagePath": "images/samples/websites/pharmacy_website/pink_pill.png"
+        }
+        
+    ],
+    "categories": [
+        {
+            "id": 1,
+            "imagePath": "images/samples/websites/pharmacy_website/supliful_supplement_2.png"
+        },
+        {
+            "id": 2,
+            "imagePath": "images/samples/websites/pharmacy_website/supliful_supplements.png"
+        },
+        {
+            "id": 3,
+            "imagePath": "images/samples/websites/pharmacy_website/syrup.png"
+        },
+        {
+            "id": 4,
+            "imagePath": "images/samples/websites/pharmacy_website/tablet_strips.png"
+        },
+        {
+            "id": 5,
+            "imagePath": "images/samples/websites/pharmacy_website/tablets.png"
+        },
+        {
+            "id": 6,
+            "imagePath": "images/samples/websites/pharmacy_website/tablets_from_container.png"
+        },
+        {
+            "id": 7,
+            "imagePath": "images/samples/websites/pharmacy_website/tablets_in_bowel.png"
+        }
+    ]
+}

@@ -138,7 +138,7 @@
           <NuxtLazyHydrate when-visible>
             <div class="flex flex-col gap-y-[2dvh]">
               <div class="">
-                <LazySwiper
+                <Swiper
                   :modules="[SwiperAutoplay]"
                   :slides-per-view="1.4"
                   :centered-slides="true"
@@ -146,22 +146,23 @@
                   :loop="true"
                   :lazy="true"
                   :autoplay="{
-                    delay: 8000,
+                    delay: 6000,
                     disableOnInteraction: false,
                   }"
                   class="h-[19vh]"
                 >
-                  <LazySwiperSlide
-                    v-for="slide in 10"
-                    :key="slide"
-                    class="bg-red-500"
+                  <SwiperSlide
+                    v-for="advert in productsData.adverts"
+                    :key="advert.id"
+                    class="border-2 rounded-lg border-red-500"
                   >
-                    <strong>{{ slide }}</strong>
-                  </LazySwiperSlide>
-                </LazySwiper>
+                    <TwicImg :src="advert.imagePath" class="rounded-lg" />
+                    <strong>{{ advert.id }}</strong>
+                  </SwiperSlide>
+                </Swiper>
               </div>
               <div class="">
-                <LazySwiper
+                <Swiper
                   :modules="[SwiperAutoplay]"
                   :slides-per-view="4"
                   :breakpoints="{
@@ -177,17 +178,18 @@
                   }"
                   class="h-[8.5vh]"
                 >
-                  <LazySwiperSlide
-                    v-for="slide in 10"
-                    :key="slide"
-                    class="bg-red-500"
+                  <SwiperSlide
+                    v-for="product in productsData.products"
+                    :key="product.id"
+                    class="border-2 rounded-lg border-red-500"
                   >
-                    <strong>{{ slide }}</strong>
-                  </LazySwiperSlide>
-                </LazySwiper>
+                    <TwicImg :src="product.imagePath" class="rounded-lg" />
+                    <strong>{{ product.id }}</strong>
+                  </SwiperSlide>
+                </Swiper>
               </div>
               <div class="">
-                <LazySwiper
+                <Swiper
                   :modules="[SwiperAutoplay]"
                   :slides-per-view="4"
                   :breakpoints="{
@@ -198,42 +200,55 @@
                   :loop="true"
                   :lazy="true"
                   :autoplay="{
-                    delay: 8000,
+                    delay: 7000,
                     disableOnInteraction: false,
                   }"
                   class="h-[8.5vh]"
                 >
-                  <LazySwiperSlide
-                    v-for="slide in 10"
-                    :key="slide"
-                    class="bg-red-500"
+                  <SwiperSlide
+                    v-for="category in productsData.categories"
+                    :key="category.id"
+                    class="border-2 rounded-lg border-red-500"
                   >
-                    <strong>{{ slide }}</strong>
-                  </LazySwiperSlide>
-                </LazySwiper>
+                    <TwicImg :src="category.imagePath" class="rounded-lg" />
+                    <strong>{{ category.id }}</strong>
+                  </SwiperSlide>
+                </Swiper>
               </div>
             </div>
           </NuxtLazyHydrate>
           <div class="grid grid-col-2 grid-row-2 gap-[1dvh] h-[42dvh]">
             <div
-              class="bg-red-500 col-start-1 col-span-1 row-start-1 row-span-1"
+              class="bg-red-500 col-start-1 col-span-1 row-start-1 row-span-1 border-2 rounded-lg border-red-500"
             >
-              1
+              <TwicImg
+                :src="productsData.products.at(1).imagePath"
+                class="rounded-lg"
+              />
             </div>
             <div
-              class="bg-red-500 col-start-2 col-span-1 row-start-1 row-span-1"
+              class="bg-red-500 col-start-2 col-span-1 row-start-1 row-span-1 border-2 rounded-lg border-red-500"
             >
-              2
+              <TwicImg
+                :src="productsData.products.at(3).imagePath"
+                class="rounded-lg"
+              />
             </div>
             <div
-              class="bg-red-500 col-start-1 col-span-1 row-start-2 row-span-1"
+              class="bg-red-500 col-start-1 col-span-1 row-start-2 row-span-1 border-2 rounded-lg border-red-500"
             >
-              3
+              <TwicImg
+                :src="productsData.products.at(5).imagePath"
+                class="rounded-lg"
+              />
             </div>
             <div
-              class="bg-red-500 col-start-2 col-span-1 row-start-2 row-span-1"
+              class="bg-red-500 col-start-2 col-span-1 row-start-2 row-span-1 border-2 rounded-lg border-red-500"
             >
-              4
+              <TwicImg
+                :src="productsData.products.at(7).imagePath"
+                class="rounded-lg"
+              />
             </div>
           </div>
         </section>
@@ -247,11 +262,14 @@
 import { useShowMenuStore } from "@/stores/header/showMenuStore";
 import { useSearchStore } from "@/stores/header/searchStore";
 import { drugsList } from "@/assets/data/drugs";
+import productsInfo from "@/assets/data/products.json";
 
 const storeShowMenu = useShowMenuStore();
 
 const storeSearch = useSearchStore();
 storeSearch.init(drugsList);
+
+const productsData = productsInfo;
 
 definePageMeta({
   layout: "samples",

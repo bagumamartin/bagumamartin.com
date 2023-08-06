@@ -15,6 +15,7 @@ export default defineNuxtConfig({
     "nuxt-lazy-hydrate",
     "nuxt-delay-hydration",
     "nuxt-swiper",
+    "@twicpics/components/nuxt3",
   ],
   css: ["~/assets/style/main.scss"],
   postcss: {
@@ -44,9 +45,9 @@ export default defineNuxtConfig({
   generate: {
     fallback: true, // Uses '404.html' instead of the default '200.html'
   },
-  render: {
-    resourceHints: false,
-  },
+  // render: {
+  //   resourceHints: false,
+  // },
   partytown: {
     forward: ["dataLayer.push"],
   },
@@ -102,5 +103,10 @@ export default defineNuxtConfig({
     mode: "mount",
     // enables nuxt-delay-hydration in dev mode for testing
     debug: process.env.NODE_ENV === "development",
+  },
+  twicpics: {
+    domain: process.env.NUXT_TWICPICS_URL,
+    anticipation: 0.5,
+    step: 50,
   },
 });
