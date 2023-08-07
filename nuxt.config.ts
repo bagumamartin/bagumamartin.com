@@ -45,9 +45,9 @@ export default defineNuxtConfig({
   generate: {
     fallback: true, // Uses '404.html' instead of the default '200.html'
   },
-  // render: {
-  //   resourceHints: false,
-  // },
+  render: {
+    resourceHints: false,
+  },
   partytown: {
     forward: ["dataLayer.push"],
   },
@@ -71,8 +71,34 @@ export default defineNuxtConfig({
         {
           rel: "icon",
           type: "image/x-icon",
-          href: "https://bagumamartin.com/favicon.ico",
+          href: "https://bagumamartin.com/images/logo/favicon.ico",
         },
+        {
+          rel: "apple-touch-icon",
+          type: "apple-touch-icon",
+          sizes: "180x180",
+          href: "https://bagumamartin.com/images/logo/apple-touch-icon.png",
+        },
+        {
+          rel: "icon",
+          type: "image/png",
+          sizes: "32x32",
+          href: "https://bagumamartin.com/images/logo/favicon-32x32.png",
+        },
+        {
+          rel: "icon",
+          type: "image/png",
+          sizes: "16x16",
+          href: "https://bagumamartin.com/images/logo/favicon-16x16.png",
+        },
+        {
+          rel: "manifest",
+          href: "https://bagumamartin.com/images/logo/site.webmanifest",
+        },
+        // <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        // <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        // <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        // <link rel="manifest" href="/site.webmanifest">
       ],
     },
   },

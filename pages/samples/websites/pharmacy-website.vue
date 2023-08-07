@@ -19,9 +19,11 @@
               to="/samples/websites/pharmacy-website"
               @click="storeShowMenu.closeMenu"
             >
-              <img
-                src="/images/pharmacy_web_sample_logo.png"
-                alt="logo"
+              <TwicImg
+                src="images/samples/websites/pharmacy_website/pharmacy_sample_website_logo.png"
+                mode="contain"
+                anchor="center"
+                refit
                 class="w-[4rem]"
               />
             </NuxtLink>
@@ -156,7 +158,15 @@
                     :key="advert.id"
                     class="border-2 rounded-lg border-red-500"
                   >
-                    <TwicImg :src="advert.imagePath" class="rounded-lg" />
+                    <TwicView>
+                      <TwicImg
+                        :src="advert.imagePath"
+                        mode="cover"
+                        anchor="center"
+                        refit
+                        class="rounded-lg"
+                      />
+                    </TwicView>
                     <strong>{{ advert.id }}</strong>
                   </SwiperSlide>
                 </Swiper>
@@ -276,7 +286,8 @@ definePageMeta({
   title: "Pharmacy website template sample",
   description:
     "This is a sample template of a pharmacy website built with NuxtJs and Tailwind CSS. It would enable your clients seamlessly browse health products, and pharmacy services you have to offer while ensuring that they experience convenience at its best.",
-  image: "/images/pharmacy_web_sample_logo.png",
+  image:
+    "/images/samples/websites/pharmacy_website/pharmacy_sample_website_logo.png",
   imageAlt: "Picture demonstrating a generic logo of a commercial pharmacy.",
   imageType: "image/png",
 });
