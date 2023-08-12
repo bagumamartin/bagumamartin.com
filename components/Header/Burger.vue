@@ -1,13 +1,51 @@
 <template>
   <div>
     <div
-      class="hamburger-menu-button"
-      :class="{ open: storeShowMenu.showMenu }"
+      :class="
+        twMerge(
+          clsx(
+            'relative right-0 h-[1.1875rem] w-[1.5rem] transition duration-500 ease-in-out ',
+            storeShowMenu.showMenu ? 'rotate-[360deg]' : `transform-none`
+          )
+        )
+      "
       @click="storeShowMenu.toggle"
     >
       <span
-        class="hamburger-menu-button-burger bg-primary rounded-full"
-        :class="{ open: storeShowMenu.showMenu }"
+        :class="
+          twMerge(
+            clsx(
+              `rounded-full ${props.burgerBackgroundClass} absolute right-0 top-0 w-[1.5rem] h-[0.125rem] transition duration-500 ease-in-out`,
+              storeShowMenu.showMenu
+                ? 'rotate-45 translate-x-[4px] translate-y-[9px]'
+                : 'transform-none before:transform-none after:w-[1rem] after:transform-none'
+            )
+          )
+        "
+      ></span>
+      <span
+        :class="
+          twMerge(
+            clsx(
+              'rounded-full absolute right-0 top-[0.5rem] w-[1.5rem] h-[0.125rem] transition duration-500 ease-in-out ',
+              storeShowMenu.showMenu
+                ? 'rotate-[360deg]'
+                : `transform-none ${props.burgerBackgroundClass}`
+            )
+          )
+        "
+      ></span>
+      <span
+        :class="
+          twMerge(
+            clsx(
+              `rounded-full ${props.burgerBackgroundClass} absolute left-0 top-[1rem] w-[1rem] h-[0.125rem] transition duration-500 ease-in-out`,
+              storeShowMenu.showMenu
+                ? 'w-[1.5rem] -rotate-45 translate-x-[3.5px] -translate-y-[7px] right-0'
+                : 'transform-none w-[1rem] transform-none'
+            )
+          )
+        "
       ></span>
     </div>
   </div>
@@ -15,60 +53,16 @@
 
 <script setup>
 import { useShowMenuStore } from "@/stores/header/showMenuStore";
+import { twMerge } from "tailwind-merge";
+import { clsx } from "clsx";
 
 const storeShowMenu = useShowMenuStore();
+
+// const props = defineProps(["color"]);
+const props = defineProps({
+  burgerBackgroundClass: {
+    type: String,
+    default: "bg-black",
+  },
+});
 </script>
-
-<style lang="scss" scoped>
-.hamburger-menu-button {
-  position: relative;
-  height: 1.1875rem;
-  width: 1.5rem;
-  @include transition-ease;
-
-  &-burger {
-    position: absolute;
-    right: 0;
-    top: 0.5rem;
-    width: 1.5rem;
-    height: 0.125rem;
-    @include transition-ease;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: -0.5rem;
-      width: 1.5rem;
-      height: 0.125rem;
-      background: $primary;
-      border-radius: 9999px;
-      @include transition-ease;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0.5rem;
-      width: 1rem;
-      height: 0.125rem;
-      background: $primary;
-      border-radius: 9999px;
-      @include transition-ease;
-    }
-
-    &.open {
-      transform: rotate(360deg);
-      background: transparent;
-
-      &::before {
-        transform: rotate(45deg) translate(5px, 8px);
-      }
-
-      &::after {
-        width: 1.5rem;
-        transform: rotate(-45deg) translate(3px, -7px);
-      }
-    }
-  }
-}
-</style>

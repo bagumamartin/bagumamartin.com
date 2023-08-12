@@ -33,9 +33,11 @@
   "dependencies": {
     "@pinia/nuxt": "^0.4.11",
     "@twicpics/components": "^0.22.0",
+    "clsx": "^2.0.0",
     "nuxt-lazy-hydrate": "^1.0.0",
     "nuxt-precompress": "^0.5.9",
     "nuxt-swiper": "^1.2.0",
-    "pinia": "^2.1.4"
+    "pinia": "^2.1.4",
+    "tailwind-merge": "^1.14.0"
   }
 }

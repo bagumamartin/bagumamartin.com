@@ -8,7 +8,10 @@
           <HeaderLogo class="w-[2.0625rem] h-[1.9925rem] fill-[#DC143C]" />
         </NuxtLink>
         <NuxtLazyHydrate when-idle>
-          <HeaderBurger class="absolute right-[2rem] z-[9999] sm:hidden" />
+          <HeaderBurger
+            burger-background-class="bg-primary"
+            class="absolute right-[2rem] z-[9999] sm:hidden"
+          />
         </NuxtLazyHydrate>
         <nav
           class="h-[100vh] pt-[10vh] inset-[0_0_0_30%] bg-black-50 backdrop-blur-[1.5rem] fixed transition-[all_1s_ease-in-out] sm:w-full sm:h-full sm:translate-x-0 sm:pt-0 sm:inset-auto sm:static sm:bg-transparent sm:backdrop-blur-0 sm:transition-none sm:inset-auto"

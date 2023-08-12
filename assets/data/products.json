@@ -1,6 +1,10 @@
 {
     "adverts": [
         {
+            "id": 0,
+            "imagePath": "images/samples/websites/pharmacy_website/pharmacy_view.png"
+        },
+        {
             "id": 1,
             "imagePath": "images/samples/websites/pharmacy_website/pharmacist_on_shelves.png"
         },
@@ -18,76 +22,103 @@
         },
         {
             "id": 5,
-            "imagePath": "images/samples/websites/pharmacy_website/pharmacy_view.png"
-        },
-        {
-            "id": 6,
             "imagePath": "images/samples/websites/pharmacy_website/pharmacy_view_2.png"
         }
     ],
     "products": [
         {
+            "id": 0,
+            "imagePath": "images/samples/websites/pharmacy_website/cream.png",
+            "name": "Lip Balm",
+            "quantity": "50g Tin",
+            "price": 7000
+        },
+        {
             "id": 1,
-            "imagePath": "images/samples/websites/pharmacy_website/cream.png"
+            "imagePath": "images/samples/websites/pharmacy_website/herbal_vitamins.png",
+            "name": "Herbal Vitamins",
+            "quantity": "30 Tablets",
+            "price": 58000
         },
         {
             "id": 2,
-            "imagePath": "images/samples/websites/pharmacy_website/herbal_vitamins.png"
+            "imagePath": "images/samples/websites/pharmacy_website/supliful_supplement_2.png",
+            "name": "Supliful Supplement",
+            "quantity": "30 Tablets",
+            "price": 112000
         },
         {
             "id": 3,
-            "imagePath": "images/samples/websites/pharmacy_website/liquid_vials.png"
+            "imagePath": "images/samples/websites/pharmacy_website/natura_medicine_pills.png",
+            "name": "Natura Medicine",
+            "quantity": "30 Tablets",
+            "price": 82000
         },
         {
             "id": 4,
-            "imagePath": "images/samples/websites/pharmacy_website/natura_medicine_pills.png"
+            "imagePath": "images/samples/websites/pharmacy_website/pills.png",
+            "name": "Amoxylin",
+            "quantity": "10 Pills",
+            "price": 12000
         },
         {
             "id": 5,
-            "imagePath": "images/samples/websites/pharmacy_website/pills.png"
+            "imagePath": "images/samples/websites/pharmacy_website/tablets_in_bowel.png",
+            "name": "Paracetamol",
+            "quantity": "10 Tablets",
+            "price": 3000
         },
         {
             "id": 6,
-            "imagePath": "images/samples/websites/pharmacy_website/pills_from_container.png"
+            "imagePath": "images/samples/websites/pharmacy_website/pills_from_container_2.png",
+            "name": "Primaquine",
+            "quantity": "10 Capsules",
+            "price": 7900
         },
         {
             "id": 7,
-            "imagePath": "images/samples/websites/pharmacy_website/pills_from_container_2.png"
-        },
-        {
-            "id": 8,
-            "imagePath": "images/samples/websites/pharmacy_website/pink_pill.png"
+            "imagePath": "images/samples/websites/pharmacy_website/supliful_supplements.png",
+            "name": "Supliful Supplement",
+            "quantity": "30 Tablets",
+            "price": 115000
         }
         
     ],
     "categories": [
         {
+            "id": 0,
+            "imagePath": "images/samples/websites/pharmacy_website/syrup.png",
+            "name": "Syrups"
+        },
+        {
             "id": 1,
-            "imagePath": "images/samples/websites/pharmacy_website/supliful_supplement_2.png"
+            "imagePath": "images/samples/websites/pharmacy_website/liquid_vials.png",
+            "name": "Injectables"
         },
         {
             "id": 2,
-            "imagePath": "images/samples/websites/pharmacy_website/supliful_supplements.png"
+            "imagePath": "images/samples/websites/pharmacy_website/tablet_strips.png",
+            "name": "Tablets"
         },
         {
             "id": 3,
-            "imagePath": "images/samples/websites/pharmacy_website/syrup.png"
+            "imagePath": "images/samples/websites/pharmacy_website/tablets.png",
+            "name": "Drugs"
         },
         {
             "id": 4,
-            "imagePath": "images/samples/websites/pharmacy_website/tablet_strips.png"
+            "imagePath": "images/samples/websites/pharmacy_website/tablets_from_container.png",
+            "name": "Pills"
         },
         {
             "id": 5,
-            "imagePath": "images/samples/websites/pharmacy_website/tablets.png"
-        },
+            "imagePath": "images/samples/websites/pharmacy_website/pills_from_container.png",
+            "name": "Capsules"
+        }, 
         {
             "id": 6,
-            "imagePath": "images/samples/websites/pharmacy_website/tablets_from_container.png"
-        },
-        {
-            "id": 7,
-            "imagePath": "images/samples/websites/pharmacy_website/tablets_in_bowel.png"
+            "imagePath": "images/samples/websites/pharmacy_website/pink_pill.png",
+            "name": "Contraceptives"
         }
     ]
 }

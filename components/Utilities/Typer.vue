@@ -15,7 +15,6 @@ const cursorColor = props.cursorColor || "red";
 
 const storeTyper = useTyperStore();
 storeTyper.init(props.typingList, props.initialContentIndex);
-// storeTyper.typeText();
 
 onMounted(() => {
   storeTyper.eraseText();

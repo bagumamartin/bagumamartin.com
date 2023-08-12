@@ -132,7 +132,5 @@ export default defineNuxtConfig({
   },
   twicpics: {
     domain: process.env.NUXT_TWICPICS_URL,
-    anticipation: 0.5,
-    step: 50,
   },
 });
