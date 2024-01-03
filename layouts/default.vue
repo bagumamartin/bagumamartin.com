@@ -61,7 +61,7 @@
               <IconLinkedin />
             </NuxtLink>
             <NuxtLink
-              to="https://wa.me/256754518384?urlencodedtext=Hello%20Baguma!%0A%0AI'm%20interested%20in%20your%20software%20solution%20services"
+              to="https://wa.me/36205381733?urlencodedtext=Hello%20Baguma!%0A%0AI'm%20interested%20in%20your%20software%20solution%20services"
               target="_blank"
             >
               <IconWhatsapp />
