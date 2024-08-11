@@ -71,7 +71,7 @@ export default defineNuxtConfig({
         lang: "en",
       },
       title:
-        "Software Applications Development Services in Uganda | Hire a Professional Developer",
+        "Software Applications Development Services | Hire a Professional Developer",
       link: [
         {
           hid: "canonical",

@@ -228,7 +228,7 @@
 definePageMeta({
   title: "Software Applications Developer",
   description:
-    "Looking for a professional applications developer in Uganda? I develop a wide range of custom software applications that meet your specific needs - website, mobile and desktop apps design and development. Hire me for your project today.",
+    "Do you want professional applications development services? I develop a wide range of custom software applications that meet your specific needs - website, mobile and desktop apps design and development. Hire me for your project today.",
   image: "/images/social_cards_image.jpg",
   imageAlt:
     "Photograph of a software developer's desk with a laptop connecter to a monitor.",
