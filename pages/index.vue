@@ -212,8 +212,8 @@
                 <div
                   class="w-full text-left text-black text-paragraph font-lexend"
                 >
-                  <p>+256 773 377 425</p>
-                  <p>+256 754 518 384</p>
+                  <p>+36 20 538 1733</p>
+                  <p>+256 75 451 8384</p>
                 </div>
               </div>
             </div>
@@ -248,7 +248,8 @@ const typingList = [
 useSchemaOrg([
   defineWebSite({
     name: "Baguma Martin",
-    description: "Baguma Martin is is a software applications developer",
+    description:
+      "Baguma Martin is is a software applications developer and a Pharmacist based in Budapest, Hungary.",
   }),
   definePerson({
     name: "Baguma Martin Amanya",
@@ -257,9 +258,9 @@ useSchemaOrg([
     nationality: "Ugandan",
     birthPlace: definePlace({
       PostalAddress: defineAddress({
-        addressLocality: "Hoima",
-        addressCountry: "Uganda",
-        addressRegion: "Western Uganda",
+        addressLocality: "Budapest",
+        addressCountry: "Hungary",
+        addressRegion: "Central Hungary",
       }),
     }),
     gender: "Male",
@@ -267,9 +268,9 @@ useSchemaOrg([
     url: "https://www.bagumamartin.com",
     image: "https://www.bagumamartin.com/images/profile.png",
     address: defineAddress({
-      addressLocality: "Hoima",
-      addressCountry: "Uganda",
-      addressRegion: "Western Uganda",
+      addressLocality: "Budapesr",
+      addressCountry: "Hungary",
+      addressRegion: "Central Hungary",
     }),
     sameAs: [
       "https://twitter.com/BagumaMartinA",

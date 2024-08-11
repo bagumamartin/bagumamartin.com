@@ -2,13 +2,14 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   sourcemap: true,
+
   modules: [
     "@pinia/nuxt",
     "nuxt-icon",
     "nuxt-gtag",
     "nuxt-schema-org",
-    "nuxt-simple-robots",
-    "nuxt-simple-sitemap",
+    "@nuxtjs/robots",
+    "@nuxtjs/sitemap",
     "@nuxt/image",
     "@nuxtjs/partytown",
     "@nuxtjs/google-fonts",
@@ -17,13 +18,16 @@ export default defineNuxtConfig({
     "nuxt-swiper",
     "@twicpics/components/nuxt3",
   ],
+
   css: ["~/assets/style/main.scss"],
+
   postcss: {
     plugins: {
       tailwindcss: {},
       autoprefixer: {},
     },
   },
+
   vite: {
     css: {
       preprocessorOptions: {
@@ -37,25 +41,30 @@ export default defineNuxtConfig({
       },
     },
   },
+
   nitro: {
     prerender: {
       crawlLinks: true,
-      routes: ['/'] ,
     },
   },
-  generate: {
-    fallback: true, // Uses '404.html' instead of the default '200.html'
-  },
-  render: {
-    resourceHints: false,
-  },
+
+  // generate: {
+  //   fallback: true, // Uses '404.html' instead of the default '200.html'
+  // },
+
+  // render: {
+  //   resourceHints: false,
+  // },
+
   partytown: {
     forward: ["dataLayer.push"],
   },
+
   gtag: {
     id: process.env.NUXT_PUBLIC_GTAG_ID,
     initialConsent: true,
   },
+
   app: {
     head: {
       htmlAttrs: {
@@ -103,12 +112,16 @@ export default defineNuxtConfig({
       ],
     },
   },
+
   site: {
-    url: "https://bagumamartin.com",
+    url: process.env.NUXT_PUBLIC_SITE_URL,
+    name: "Baguma Martin",
   },
+
   image: {
     format: ["webp"],
   },
+
   googleFonts: {
     display: "swap",
     download: true,
@@ -126,12 +139,16 @@ export default defineNuxtConfig({
       },
     },
   },
+
   delayHydration: {
     mode: "mount",
     // enables nuxt-delay-hydration in dev mode for testing
     debug: process.env.NODE_ENV === "development",
   },
+
   twicpics: {
     domain: process.env.NUXT_TWICPICS_URL,
   },
+
+  compatibilityDate: "2024-08-11",
 });
