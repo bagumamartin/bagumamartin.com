@@ -120,13 +120,13 @@ useHead({
           ? `${route.meta.title}  | Hire a Professional Developer`
           : "Software Applications Developer | Hire a Professional Developer";
       },
-      tagPriority: "high",
+      tagPriority: "critical",
     },
     {
       hid: "og:type",
       property: "og:type",
       content: "website",
-      tagPriority: "high",
+      tagPriority: "critical",
     },
     {
       hid: "og:description",
@@ -136,7 +136,7 @@ useHead({
           ? `${route.meta.description}`
           : "I develop a wide range of custom software applications that meet your specific needs - website, mobile and desktop apps design and development. Hire me for your project today.";
       },
-      tagPriority: "high",
+      tagPriority: "critical",
     },
     {
       hid: "og:image",
@@ -146,7 +146,7 @@ useHead({
           ? `${baseURI}${route.meta.image}`
           : `${baseURI}/images/social_cards_image.jpg`;
       },
-      tagPriority: "high",
+      tagPriority: "critical",
     },
     {
       hid: "og:image:secure_url",
@@ -156,7 +156,7 @@ useHead({
           ? `${baseURI}${route.meta.image}`
           : `${baseURI}/images/social_cards_image.jpg`;
       },
-      tagPriority: "high",
+      tagPriority: "critical",
     },
     {
       hid: "og:image:alt",
@@ -166,7 +166,7 @@ useHead({
           ? `${route.meta.imageAlt}`
           : "Photograph about software development";
       },
-      tagPriority: "high",
+      tagPriority: "critical",
     },
     {
       hid: "og:image:type",
@@ -174,25 +174,25 @@ useHead({
       content: () => {
         return route.meta.imageType ? `${route.meta.imageType}` : "image/jpeg";
       },
-      tagPriority: "high",
+      tagPriority: "critical",
     },
     {
       hid: "og:image:width",
       property: "og:image:width",
       content: "1200",
-      tagPriority: "high",
+      tagPriority: "critical",
     },
     {
       hid: "og:image:height",
       property: "og:image:height",
       content: "630",
-      tagPriority: "high",
+      tagPriority: "critical",
     },
     {
       hid: "og:url",
       property: "og:url",
       content: `${baseURI}${route.fullPath}`,
-      tagPriority: "high",
+      tagPriority: "critical",
     },
     // Twitter card data for SEO
     {
@@ -205,13 +205,13 @@ useHead({
       hid: "twitter:site",
       name: "twitter:site",
       content: "@BagumaMartinA",
-      tagPriority: "high",
+      tagPriority: "critical",
     },
     {
       hid: "twitter:creator",
       name: "twitter:creator",
       content: "@BagumaMartinA",
-      tagPriority: "high",
+      tagPriority: "critical",
     },
     {
       hid: "twitter:title",
@@ -221,7 +221,7 @@ useHead({
           ? `${route.meta.title}  | Hire a Professional Developer`
           : "Software Applications Developer | Hire a Professional Developer";
       },
-      tagPriority: "high",
+      tagPriority: "critical",
     },
     {
       hid: "twitter:description",
@@ -231,7 +231,7 @@ useHead({
           ? `${route.meta.description}`
           : "I develop a wide range of custom software applications that meet your specific needs - website, mobile and desktop apps design and development. Hire me for your project today.";
       },
-      tagPriority: "high",
+      tagPriority: "critical",
     },
     {
       hid: "twitter:image",
@@ -241,14 +241,14 @@ useHead({
           ? `${baseURI}${route.meta.image}`
           : `${baseURI}/images/social_cards_image.jpg`;
       },
-      tagPriority: "high",
+      tagPriority: "critical",
     },
     {
       hid: "twitter:url",
       name: "twitter:url",
       content: `${baseURI}${route.fullPath}`,
       tagPosition: "head",
-      tagPriority: "high",
+      tagPriority: "critical",
     },
 
     // Microsoft tiles
