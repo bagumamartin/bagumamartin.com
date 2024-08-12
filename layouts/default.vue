@@ -184,19 +184,19 @@ useHead({
       hid: "twitter:card",
       name: "twitter:card",
       content: "summary_large_image",
-      tagPriority: "high",
+      tagPriority: "critical",
     },
     {
       hid: "twitter:site",
       name: "twitter:site",
       content: "@BagumaMartinA",
-      tagPriority: "high",
+      tagPriority: "critical",
     },
     {
       hid: "twitter:creator",
       name: "twitter:creator",
       content: "@BagumaMartinA",
-      tagPriority: "high",
+      tagPriority: "critical",
     },
     {
       hid: "twitter:title",
@@ -206,7 +206,7 @@ useHead({
           ? `${route.meta.title}  | Hire a Professional Developer`
           : "Software Applications Developer | Hire a Professional Developer";
       },
-      tagPriority: "high",
+      tagPriority: "critical",
     },
     {
       hid: "twitter:description",
@@ -216,7 +216,7 @@ useHead({
           ? `${route.meta.description}`
           : "I develop a wide range of custom software applications that meet your specific needs - website, mobile and desktop apps design and development. Hire me for your project today.";
       },
-      tagPriority: "high",
+      tagPriority: "critical",
     },
     {
       hid: "twitter:image",
@@ -226,13 +226,14 @@ useHead({
           ? `${baseURI}${route.meta.image}`
           : `${baseURI}/images/social_cards_image.jpg`;
       },
-      tagPriority: "high",
+      tagPriority: "critical",
     },
     {
       hid: "twitter:url",
       name: "twitter:url",
       content: `${baseURI}${route.fullPath}`,
-      tagPriority: "high",
+      tagPosition: "head",
+      tagPriority: "critical",
     },
 
     // Microsoft tiles
