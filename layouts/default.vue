@@ -198,11 +198,12 @@ useHead({
     {
       hid: "og:image",
       property: "og:image",
-      content: () => {
-        return route.meta.image
-          ? `${baseURI}${route.meta.image}`
-          : `${baseURI}/images/social_cards_image.jpg`;
-      },
+      content: `${baseURI}/images/social_cards_image.jpg`,
+      // content: () => {
+      //   return route.meta.image
+      //     ? `${baseURI}${route.meta.image}`
+      //     : `${baseURI}/images/social_cards_image.jpg`;
+      // },
     },
     {
       hid: "og:image:secure_url",
@@ -274,7 +275,6 @@ useHead({
     },
     {
       hid: "thumbnailUrl",
-      itemprop: "thumbnailUrl",
       href: `${baseURI}${route.meta.image}`,
     },
   ],
