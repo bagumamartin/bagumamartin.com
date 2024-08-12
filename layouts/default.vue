@@ -110,30 +110,6 @@ useHead({
       : "Software Applications Developer";
   },
   meta: [
-    {
-      hid: "description",
-      name: "description",
-      content: () => {
-        return route.meta.description
-          ? `${route.meta.description}`
-          : "I develop a wide range of custom software applications that meet your specific needs - website, mobile and desktop apps design and development. Hire me for your project today.";
-      },
-    },
-    {
-      hid: "author",
-      name: "author",
-      content: "Baguma Martin",
-    },
-    {
-      hid: "keywords",
-      name: "keywords",
-      content: "software developer, applications developer, web developer",
-    },
-    {
-      hid: "viewport",
-      name: "viewport",
-      content: "width=device-width, initial-scale=1.0",
-    },
     // Open graph tag for SEO
     {
       hid: "og:site_name",
@@ -208,7 +184,6 @@ useHead({
       property: "og:url",
       content: `${baseURI}${route.fullPath}`,
     },
-
     // Twitter card data for SEO
     {
       hid: "twitter:card",
@@ -350,6 +325,32 @@ useHead({
       hid: "apple-mobile-web-app-title",
       name: "apple-mobile-web-app-title",
       content: "Baguma Martin",
+    },
+
+    // General SEO
+    {
+      hid: "description",
+      name: "description",
+      content: () => {
+        return route.meta.description
+          ? `${route.meta.description}`
+          : "I develop a wide range of custom software applications that meet your specific needs - website, mobile and desktop apps design and development. Hire me for your project today.";
+      },
+    },
+    {
+      hid: "author",
+      name: "author",
+      content: "Baguma Martin",
+    },
+    {
+      hid: "keywords",
+      name: "keywords",
+      content: "software developer, applications developer, web developer",
+    },
+    {
+      hid: "viewport",
+      name: "viewport",
+      content: "width=device-width, initial-scale=1.0",
     },
   ],
   link: [
