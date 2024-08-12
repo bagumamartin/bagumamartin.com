@@ -104,11 +104,6 @@ const route = useRoute();
 const baseURI = "https://bagumamartin.com";
 
 useHead({
-  title: () => {
-    return route.meta.title
-      ? `${route.meta.title}`
-      : "Software Applications Developer";
-  },
   meta: [
     // Open graph tag for SEO
     {
@@ -189,12 +184,19 @@ useHead({
       hid: "twitter:card",
       name: "twitter:card",
       content: "summary_large_image",
+      tagPriority: "high",
     },
-    { hid: "twitter:site", name: "twitter:site", content: "@BagumaMartinA" },
+    {
+      hid: "twitter:site",
+      name: "twitter:site",
+      content: "@BagumaMartinA",
+      tagPriority: "high",
+    },
     {
       hid: "twitter:creator",
       name: "twitter:creator",
       content: "@BagumaMartinA",
+      tagPriority: "high",
     },
     {
       hid: "twitter:title",
@@ -204,6 +206,7 @@ useHead({
           ? `${route.meta.title}  | Hire a Professional Developer`
           : "Software Applications Developer | Hire a Professional Developer";
       },
+      tagPriority: "high",
     },
     {
       hid: "twitter:description",
@@ -213,6 +216,7 @@ useHead({
           ? `${route.meta.description}`
           : "I develop a wide range of custom software applications that meet your specific needs - website, mobile and desktop apps design and development. Hire me for your project today.";
       },
+      tagPriority: "high",
     },
     {
       hid: "twitter:image",
@@ -222,11 +226,13 @@ useHead({
           ? `${baseURI}${route.meta.image}`
           : `${baseURI}/images/social_cards_image.jpg`;
       },
+      tagPriority: "high",
     },
     {
       hid: "twitter:url",
       name: "twitter:url",
       content: `${baseURI}${route.fullPath}`,
+      tagPriority: "high",
     },
 
     // Microsoft tiles
@@ -364,5 +370,10 @@ useHead({
       href: `${baseURI}${route.meta.image}`,
     },
   ],
+  title: () => {
+    return route.meta.title
+      ? `${route.meta.title}`
+      : "Software Applications Developer";
+  },
 });
 </script>
