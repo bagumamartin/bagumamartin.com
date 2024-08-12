@@ -124,6 +124,90 @@ useHead({
       name: "author",
       content: "Baguma Martin",
     },
+    {
+      hid: "keywords",
+      name: "keywords",
+      content: "software developer, applications developer, web developer",
+    },
+    {
+      hid: "viewport",
+      name: "viewport",
+      content: "width=device-width, initial-scale=1.0",
+    },
+    // Open graph tag for SEO
+    {
+      hid: "og:site_name",
+      property: "og:site_name",
+      content: "Baguma Martin | Applications Developer",
+    },
+    {
+      hid: "og:title",
+      property: "og:title",
+      content: () => {
+        return route.meta.title
+          ? `${route.meta.title}  | Hire a Professional Developer`
+          : "Software Applications Developer | Hire a Professional Developer";
+      },
+    },
+    { hid: "og:type", property: "og:type", content: "website" },
+    {
+      hid: "og:description",
+      property: "og:description",
+      content: () => {
+        return route.meta.description
+          ? `${route.meta.description}`
+          : "I develop a wide range of custom software applications that meet your specific needs - website, mobile and desktop apps design and development. Hire me for your project today.";
+      },
+    },
+    {
+      hid: "og:image",
+      property: "og:image",
+      content: () => {
+        return route.meta.image
+          ? `${baseURI}${route.meta.image}`
+          : `${baseURI}/images/social_cards_image.jpg`;
+      },
+    },
+    {
+      hid: "og:image:secure_url",
+      property: "og:image:secure_url",
+      content: () => {
+        return route.meta.image
+          ? `${baseURI}${route.meta.image}`
+          : `${baseURI}/images/social_cards_image.jpg`;
+      },
+    },
+    {
+      hid: "og:image:alt",
+      property: "og:image:alt",
+      content: () => {
+        return route.meta.imageAlt
+          ? `${route.meta.imageAlt}`
+          : "Photograph about software development";
+      },
+    },
+    {
+      hid: "og:image:type",
+      property: "og:image:type",
+      content: () => {
+        return route.meta.imageType ? `${route.meta.imageType}` : "image/jpeg";
+      },
+    },
+    {
+      hid: "og:image:width",
+      property: "og:image:width",
+      content: "1200",
+    },
+    {
+      hid: "og:image:height",
+      property: "og:image:height",
+      content: "630",
+    },
+    {
+      hid: "og:url",
+      property: "og:url",
+      content: `${baseURI}${route.fullPath}`,
+    },
 
     // Twitter card data for SEO
     {
@@ -170,82 +254,6 @@ useHead({
       content: `${baseURI}${route.fullPath}`,
     },
 
-    // Open graph tag for SEO
-    {
-      hid: "og:site_name",
-      property: "og:site_name",
-      content: "Baguma Martin | Applications Developer",
-    },
-    {
-      hid: "og:title",
-      property: "og:title",
-      content: () => {
-        return route.meta.title
-          ? `${route.meta.title}  | Hire a Professional Developer`
-          : "Software Applications Developer | Hire a Professional Developer";
-      },
-    },
-    { hid: "og:type", property: "og:type", content: "website" },
-    {
-      hid: "og:description",
-      property: "og:description",
-      content: () => {
-        return route.meta.description
-          ? `${route.meta.description}`
-          : "I develop a wide range of custom software applications that meet your specific needs - website, mobile and desktop apps design and development. Hire me for your project today.";
-      },
-    },
-    {
-      hid: "og:image",
-      property: "og:image",
-      content: `${baseURI}/images/social_cards_image.jpg`,
-      // content: () => {
-      //   return route.meta.image
-      //     ? `${baseURI}${route.meta.image}`
-      //     : `${baseURI}/images/social_cards_image.jpg`;
-      // },
-    },
-    {
-      hid: "og:image:secure_url",
-      property: "og:image:secure_url",
-      content: () => {
-        return route.meta.image
-          ? `${baseURI}${route.meta.image}`
-          : `${baseURI}/images/social_cards_image.jpg`;
-      },
-    },
-    {
-      hid: "og:image:alt",
-      property: "og:image:alt",
-      content: () => {
-        return route.meta.imageAlt
-          ? `${route.meta.imageAlt}`
-          : "Photograph about software development";
-      },
-    },
-    {
-      hid: "og:image:type",
-      property: "og:image:type",
-      content: () => {
-        return route.meta.imageType ? `${route.meta.imageType}` : "image/jpeg";
-      },
-    },
-    {
-      hid: "og:image:width",
-      property: "og:image:width",
-      content: "1200",
-    },
-    {
-      hid: "og:image:height",
-      property: "og:image:height",
-      content: "630",
-    },
-    {
-      hid: "og:url",
-      property: "og:url",
-      content: `${baseURI}${route.fullPath}`,
-    },
-
     // Microsoft tiles
     {
       hid: "msapplication-TileColor",
@@ -265,6 +273,83 @@ useHead({
       hid: "theme-color",
       name: "theme-color",
       content: "#DC143C",
+    },
+
+    // Other SEO
+    {
+      hid: "robots",
+      name: "robots",
+      content: "index, follow",
+    },
+    {
+      hid: "googlebot",
+      name: "googlebot",
+      content: "index, follow",
+    },
+    {
+      hid: "bingbot",
+      name: "bingbot",
+      content: "index, follow",
+    },
+    {
+      hid: "apple-mobile-web-app-capable",
+      name: "apple-mobile-web-app-capable",
+      content: "yes",
+    },
+    {
+      hid: "apple-mobile-web-app-status-bar-style",
+      name: "apple-mobile-web-app-status-bar-style",
+      content: "black-translucent",
+    },
+    {
+      hid: "apple-mobile-web-app-title",
+      name: "apple-mobile-web-app-title",
+      content: "Baguma Martin",
+    },
+    {
+      hid: "application-name",
+      name: "application-name",
+      content: "Baguma Martin",
+    },
+    {
+      hid: "msapplication-TileColor",
+      name: "msapplication-TileColor",
+      content: "#DC143C",
+    },
+    {
+      hid: "msapplication-TileImage",
+      name: "msapplication-TileImage",
+      content: "/images/mstile-144x144.png",
+    },
+    {
+      hid: "theme-color",
+      name: "theme-color",
+      content: "#DC143C",
+    },
+    {
+      hid: "format-detection",
+      name: "format-detection",
+      content: "telephone=no",
+    },
+    {
+      hid: "mobile-web-app-capable",
+      name: "mobile-web-app-capable",
+      content: "yes",
+    },
+    {
+      hid: "apple-mobile-web-app-capable",
+      name: "apple-mobile-web-app-capable",
+      content: "yes",
+    },
+    {
+      hid: "apple-mobile-web-app-status-bar-style",
+      name: "apple-mobile-web-app-status-bar-style",
+      content: "black-translucent",
+    },
+    {
+      hid: "apple-mobile-web-app-title",
+      name: "apple-mobile-web-app-title",
+      content: "Baguma Martin",
     },
   ],
   link: [
