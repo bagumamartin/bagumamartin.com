@@ -20,7 +20,12 @@
           <div
             class="h-full pl-[20vw] text-left text-heading-5 text-primary font-poppins flex flex-col gap-y-[3vh] justify-start sm:w-full sm:flex-row sm:justify-end sm:items-center sm:gap-x-[4vw] sm:pl-0"
           >
-            <NuxtLink to="/" @click="storeShowMenu.closeMenu"> Home </NuxtLink>
+            <NuxtLink to="/" @click="storeShowMenu.closeMenu"> 
+              Home 
+            </NuxtLink>
+            <NuxtLink to="/samples" @click="storeShowMenu.closeMenu">
+              Samples
+            </NuxtLink>
             <NuxtLink to="/services" @click="storeShowMenu.closeMenu">
               Services
             </NuxtLink>
