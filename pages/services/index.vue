@@ -24,7 +24,7 @@
 definePageMeta({
   title: "Software Applications Development Services",
   description:
-    "Discover the top-notch applications development services I offer. I will help you create an application that meets your specific needs. Let's turn your ideas into reality with cutting-edge solutions.",
+    "Discover the top notch applications development services I offer. I will help you create an application that meets your specific needs. Let's turn your ideas into reality with cutting-edge solutions.",
   image: "/images/social_cards_image.jpg",
   imageAlt:
     "Photograph of a software developer's desk with a laptop connecter to a monitor.",
