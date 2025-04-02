@@ -249,26 +249,27 @@ useSchemaOrg([
   defineWebSite({
     name: "Baguma Martin",
     description:
-      "Baguma Martin is is a software applications developer and a Pharmacist based in Budapest, Hungary.",
+      "Baguma Martin is a software applications developer and a Pharmacist based in Budapest, Hungary.",
+    url: "https://bagumamartin.com",
   }),
   definePerson({
     name: "Baguma Martin Amanya",
-    logo: "https://www.bagumamartin.com/logo.png",
     alternateName: "Baguma Martin",
     nationality: "Ugandan",
     birthPlace: definePlace({
-      PostalAddress: defineAddress({
+      name: "Budapest",
+      address: defineAddress({
         addressLocality: "Budapest",
         addressCountry: "Hungary",
         addressRegion: "Central Hungary",
       }),
     }),
     gender: "Male",
-    Description: ["Technologist", "Pharmacist"],
-    url: "https://www.bagumamartin.com",
-    image: "https://www.bagumamartin.com/images/profile.png",
+    description: ["Technologist", "Pharmacist"],
+    url: "https://bagumamartin.com",
+    image: "https://bagumamartin.com/images/profile.png",
     address: defineAddress({
-      addressLocality: "Budapesr",
+      addressLocality: "Budapest",
       addressCountry: "Hungary",
       addressRegion: "Central Hungary",
     }),

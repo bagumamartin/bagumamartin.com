@@ -110,7 +110,7 @@ export default defineNuxtConfig({
   },
 
   site: {
-    url: process.env.NUXT_PUBLIC_SITE_URL,
+    url: process.env.NUXT_PUBLIC_SITE_URL || "https://bagumamartin.com",
     name: "Baguma Martin",
   },
 
