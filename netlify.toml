@@ -1,11 +1,11 @@
 # Default build settings
 [build]
   publish = ".output/public"
-  command = "npm run build"
+  command = "npm run generate"
 
 # Production context
 [context.production]
-  command = "npm run build"
+  command = "npm run generate"
 
 # Redirect rules for subdomains
 [[redirects]]
