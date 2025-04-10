@@ -525,12 +525,9 @@
 </template>
 
 <script setup lang="ts">
-// Custom function to define CreativeWork schema
-const defineCreativeWork = (creativeWork: any) => {
-  return {
-    "@type": "CreativeWork",
-    ...creativeWork,
-  };
+// Import the injector plugin
+const { $injectSchema } = useNuxtApp() as unknown as {
+  $injectSchema: (schema: any[]) => void;
 };
 
 definePageMeta({
@@ -543,79 +540,106 @@ definePageMeta({
   imageType: "image/jpeg",
 });
 
-// JSON-LD Schema Markup for Technologies Page
-useSchemaOrg([
-  defineWebPage({
-    name: "Technologies Used by Baguma Martin",
-    description:
-      "Programming languages, frameworks, and tools used by Baguma Martin for software development",
-  }),
-  defineItemList({
-    name: "Technology Categories",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Frontend Development",
-        description: "Vue.js, Nuxt.js, React, Next.js, Angular, Tailwind CSS",
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "Backend Development",
-        description: "Node.js, Express, Python, Django, PHP, Laravel",
-      },
-      {
-        "@type": "ListItem",
-        position: 3,
-        name: "Mobile Development",
-        description: "React Native, Flutter, Swift, Kotlin",
-      },
-      {
-        "@type": "ListItem",
-        position: 4,
-        name: "Database & Storage",
-        description: "MongoDB, PostgreSQL, MySQL, Firebase, Redis, GraphQL",
-      },
-      {
-        "@type": "ListItem",
-        position: 5,
-        name: "DevOps & Cloud",
-        description:
-          "Docker, Kubernetes, AWS, Google Cloud, Azure, GitLab CI/CD",
-      },
-      {
-        "@type": "ListItem",
-        position: 6,
-        name: "Data Science & AI",
-        description: "TensorFlow, PyTorch, Pandas, Scikit-learn",
-      },
-    ],
-  }),
-  defineCreativeWork({
-    name: "Technical Skills Assessment",
-    creator: {
-      "@type": "Person",
-      name: "Baguma Martin",
+// Directly inject JSON-LD schema data for better compatibility with Rich Results
+onMounted(() => {
+  $injectSchema([
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      name: "Technologies Used by Baguma Martin",
+      description:
+        "Programming languages, frameworks, and tools used by Baguma Martin for software development",
     },
-    abstract:
-      "Detailed assessment of technical expertise across multiple programming disciplines and technologies",
-    audience: {
-      "@type": "Audience",
-      audienceType: "Businesses seeking software development services",
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      name: "Technology Categories",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          item: {
+            "@type": "Thing",
+            name: "Frontend Development",
+            description:
+              "Vue.js, Nuxt.js, React, Next.js, Angular, Tailwind CSS",
+          },
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          item: {
+            "@type": "Thing",
+            name: "Backend Development",
+            description: "Node.js, Express, Python, Django, PHP, Laravel",
+          },
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          item: {
+            "@type": "Thing",
+            name: "Mobile Development",
+            description: "React Native, Flutter, Swift, Kotlin",
+          },
+        },
+        {
+          "@type": "ListItem",
+          position: 4,
+          item: {
+            "@type": "Thing",
+            name: "Database & Storage",
+            description: "MongoDB, PostgreSQL, MySQL, Firebase, Redis, GraphQL",
+          },
+        },
+        {
+          "@type": "ListItem",
+          position: 5,
+          item: {
+            "@type": "Thing",
+            name: "DevOps & Cloud",
+            description:
+              "Docker, Kubernetes, AWS, Google Cloud, Azure, GitLab CI/CD",
+          },
+        },
+        {
+          "@type": "ListItem",
+          position: 6,
+          item: {
+            "@type": "Thing",
+            name: "Data Science & AI",
+            description: "TensorFlow, PyTorch, Pandas, Scikit-learn",
+          },
+        },
+      ],
     },
-    keywords: [
-      "Vue.js",
-      "React",
-      "Node.js",
-      "Python",
-      "Django",
-      "Mobile Development",
-      "Machine Learning",
-      "Cloud Computing",
-      "DevOps",
-      "Database Design",
-    ],
-  }),
-]);
+    {
+      "@context": "https://schema.org",
+      "@type": "CreativeWork",
+      name: "Technical Skills Assessment",
+      creator: {
+        "@type": "Person",
+        name: "Baguma Martin",
+      },
+      abstract:
+        "Detailed assessment of technical expertise across multiple programming disciplines and technologies",
+      audience: {
+        "@type": "Audience",
+        audienceType: "Businesses seeking software development services",
+      },
+      keywords: [
+        "Vue.js",
+        "React",
+        "Node.js",
+        "Python",
+        "Django",
+        "Mobile Development",
+        "Machine Learning",
+        "Cloud Computing",
+        "DevOps",
+        "Database Design",
+      ],
+    },
+  ]);
+});
 </script>

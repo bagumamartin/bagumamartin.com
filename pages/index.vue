@@ -225,12 +225,9 @@
 </template>
 
 <script setup lang="ts">
-// Custom function to define ProfessionalService schema
-const defineProfessionalService = (professionalService: any) => {
-  return {
-    "@type": "ProfessionalService",
-    ...professionalService,
-  };
+// Import the injector plugin
+const { $injectSchema } = useNuxtApp() as unknown as {
+  $injectSchema: (schema: any[]) => void;
 };
 
 definePageMeta({
@@ -252,72 +249,82 @@ const typingList = [
   "a Graphics Designer",
 ];
 
-// JSON-LD Schema Markup for SEO
-useSchemaOrg([
-  defineWebSite({
-    name: "Baguma Martin",
-    description:
-      "Baguma Martin is a software applications developer and a Pharmacist based in Budapest, Hungary.",
-    url: "https://bagumamartin.com",
-  }),
-  definePerson({
-    name: "Baguma Martin Amanya",
-    alternateName: "Baguma Martin",
-    nationality: "Ugandan",
-    birthPlace: definePlace({
-      name: "Budapest",
-      address: defineAddress({
+// Directly inject JSON-LD schema data for better compatibility with Rich Results
+onMounted(() => {
+  $injectSchema([
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      name: "Baguma Martin",
+      description:
+        "Baguma Martin is a software applications developer and a Pharmacist based in Budapest, Hungary.",
+      url: "https://bagumamartin.com",
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      name: "Baguma Martin Amanya",
+      alternateName: "Baguma Martin",
+      nationality: "Ugandan",
+      gender: "Male",
+      description: "Software Developer, Technologist, Pharmacist",
+      url: "https://bagumamartin.com",
+      image: "https://bagumamartin.com/images/profile.png",
+      jobTitle: "Software Applications Developer",
+      knowsLanguage: ["English", "Hungarian"],
+      birthPlace: {
+        "@type": "Place",
+        name: "Budapest",
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Budapest",
+          addressCountry: "Hungary",
+          addressRegion: "Central Hungary",
+        },
+      },
+      address: {
+        "@type": "PostalAddress",
         addressLocality: "Budapest",
         addressCountry: "Hungary",
         addressRegion: "Central Hungary",
-      }),
-    }),
-    gender: "Male",
-    description: ["Software Developer", "Technologist", "Pharmacist"],
-    url: "https://bagumamartin.com",
-    image: "https://bagumamartin.com/images/profile.png",
-    jobTitle: "Software Applications Developer",
-    knowsLanguage: ["English", "Hungarian"],
-    address: defineAddress({
-      addressLocality: "Budapest",
-      addressCountry: "Hungary",
-      addressRegion: "Central Hungary",
-    }),
-    sameAs: [
-      "https://twitter.com/BagumaMartinA",
-      "https://www.instagram.com/bagumaamanya/",
-      "https://www.facebook.com/baguma.a.martinamanya",
-      "https://www.linkedin.com/in/baguma-martin-b924381a7/",
-      "https://github.com/bagumamartin",
-    ],
-  }),
-  defineProfessionalService({
-    name: "Baguma Martin Software Development Services",
-    description:
-      "Professional software development services including web, mobile, and desktop applications development, data science solutions, and cybersecurity services",
-    url: "https://bagumamartin.com/services",
-    provider: {
-      "@type": "Person",
-      name: "Baguma Martin Amanya",
-    },
-    areaServed: {
-      "@type": "GeoCircle",
-      geoMidpoint: {
-        "@type": "GeoCoordinates",
-        latitude: 47.4979,
-        longitude: 19.0402,
       },
-      geoRadius: "40000",
+      sameAs: [
+        "https://twitter.com/BagumaMartinA",
+        "https://www.instagram.com/bagumaamanya/",
+        "https://www.facebook.com/baguma.a.martinamanya",
+        "https://www.linkedin.com/in/baguma-martin-b924381a7/",
+        "https://github.com/bagumamartin",
+      ],
     },
-    availableLanguage: ["English", "Hungarian"],
-    serviceType: [
-      "Web Development",
-      "Mobile App Development",
-      "Desktop Applications",
-      "Data Science",
-      "Cybersecurity",
-    ],
-  }),
-  defineWebPage(),
-]);
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      name: "Baguma Martin Software Development Services",
+      description:
+        "Professional software development services including web, mobile, and desktop applications development, data science solutions, and cybersecurity services",
+      url: "https://bagumamartin.com/services",
+      provider: {
+        "@type": "Person",
+        name: "Baguma Martin Amanya",
+      },
+      areaServed: {
+        "@type": "GeoCircle",
+        geoMidpoint: {
+          "@type": "GeoCoordinates",
+          latitude: 47.4979,
+          longitude: 19.0402,
+        },
+        geoRadius: "40000",
+      },
+      availableLanguage: ["English", "Hungarian"],
+      serviceType: [
+        "Web Development",
+        "Mobile App Development",
+        "Desktop Applications",
+        "Data Science",
+        "Cybersecurity",
+      ],
+    },
+  ]);
+});
 </script>

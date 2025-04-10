@@ -99,13 +99,8 @@
 </template>
 
 <script setup lang="ts">
-// Custom function to define Collection schema
-const defineCollection = (collection: any) => {
-  return {
-    "@type": "CollectionPage",
-    ...collection,
-  };
-};
+// Import the injector plugin
+const { $injectSchema } = useNuxtApp();
 
 definePageMeta({
   title: "Project Samples",
@@ -116,59 +111,65 @@ definePageMeta({
   imageType: "image/jpeg",
 });
 
-// JSON-LD Schema Markup for Samples/Projects Page
-useSchemaOrg([
-  defineWebPage({
-    name: "Project Portfolio",
-    description: "Software development project samples by Baguma Martin",
-  }),
-  defineCollection({
-    name: "Software Project Portfolio",
-    description: "Collection of software projects developed by Baguma Martin",
-    creator: {
-      "@type": "Person",
-      name: "Baguma Martin",
-      url: "https://bagumamartin.com",
+// Directly inject JSON-LD schema data for better compatibility with Rich Results
+onMounted(() => {
+  $injectSchema([
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      name: "Project Portfolio",
+      description: "Software development project samples by Baguma Martin",
     },
-    about: {
-      "@type": "Thing",
-      name: "Software Development",
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      name: "Software Project Portfolio",
+      description: "Collection of software projects developed by Baguma Martin",
+      creator: {
+        "@type": "Person",
+        name: "Baguma Martin",
+        url: "https://bagumamartin.com",
+      },
+      about: {
+        "@type": "Thing",
+        name: "Software Development",
+      },
+      itemListElement: [
+        {
+          "@type": "WebSite",
+          position: 1,
+          name: "Pharmacy Website Sample",
+          description:
+            "A template pharmacy website demonstrating e-commerce capabilities",
+          url: "https://bagumamartin.com/samples/websites/pharmacy-website",
+        },
+        {
+          "@type": "SoftwareApplication",
+          position: 2,
+          name: "Mobile Applications",
+          description: "Mobile app samples for iOS and Android platforms",
+          applicationCategory: "MobileApplication",
+          operatingSystem: "iOS, Android",
+          offers: {
+            "@type": "Offer",
+            availability: "https://schema.org/ComingSoon",
+          },
+        },
+        {
+          "@type": "SoftwareApplication",
+          position: 3,
+          name: "Desktop Applications",
+          description:
+            "Desktop software samples built for productivity and performance",
+          applicationCategory: "DesktopApplication",
+          operatingSystem: "Windows, macOS, Linux",
+          offers: {
+            "@type": "Offer",
+            availability: "https://schema.org/ComingSoon",
+          },
+        },
+      ],
     },
-    itemListElement: [
-      {
-        "@type": "WebSite",
-        position: 1,
-        name: "Pharmacy Website Sample",
-        description:
-          "A template pharmacy website demonstrating e-commerce capabilities",
-        url: "https://bagumamartin.com/samples/websites/pharmacy-website",
-      },
-      {
-        "@type": "SoftwareApplication",
-        position: 2,
-        name: "Mobile Applications",
-        description: "Mobile app samples for iOS and Android platforms",
-        applicationCategory: "MobileApplication",
-        operatingSystem: "iOS, Android",
-        offers: {
-          "@type": "Offer",
-          availability: "https://schema.org/ComingSoon",
-        },
-      },
-      {
-        "@type": "SoftwareApplication",
-        position: 3,
-        name: "Desktop Applications",
-        description:
-          "Desktop software samples built for productivity and performance",
-        applicationCategory: "DesktopApplication",
-        operatingSystem: "Windows, macOS, Linux",
-        offers: {
-          "@type": "Offer",
-          availability: "https://schema.org/ComingSoon",
-        },
-      },
-    ],
-  }),
-]);
+  ]);
+});
 </script>

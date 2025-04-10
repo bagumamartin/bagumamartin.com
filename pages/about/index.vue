@@ -232,12 +232,9 @@
 </template>
 
 <script setup lang="ts">
-// Custom function to define Occupation schema
-const defineOccupation = (occupation: any) => {
-  return {
-    "@type": "Occupation",
-    ...occupation,
-  };
+// Import the injector plugin
+const { $injectSchema } = useNuxtApp() as unknown as {
+  $injectSchema: (schema: any[]) => void;
 };
 
 definePageMeta({
@@ -249,69 +246,78 @@ definePageMeta({
   imageType: "image/png",
 });
 
-// JSON-LD Schema Markup for About Page
-useSchemaOrg([
-  defineWebPage({
-    name: "About Baguma Martin",
-    description:
-      "Professional background, education, and expertise of Baguma Martin, Software Developer & Pharmacist",
-  }),
-  definePerson({
-    name: "Baguma Martin Amanya",
-    alternateName: "Baguma Martin",
-    jobTitle: "Software Applications Developer",
-    description: "Software Applications Developer with background in Pharmacy",
-    image: "https://bagumamartin.com/images/profile.png",
-    url: "https://bagumamartin.com/about",
-    nationality: "Ugandan",
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Budapest",
-      addressCountry: "Hungary",
+// Directly inject JSON-LD schema data for better compatibility with Rich Results
+onMounted(() => {
+  $injectSchema([
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      name: "About Baguma Martin",
+      description:
+        "Professional background, education, and expertise of Baguma Martin, Software Developer & Pharmacist",
     },
-    alumniOf: [
-      {
-        "@type": "EducationalOrganization",
-        name: "Master's in Computer Science",
-        startDate: "2020",
-        endDate: "2022",
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      name: "Baguma Martin Amanya",
+      alternateName: "Baguma Martin",
+      jobTitle: "Software Applications Developer",
+      description:
+        "Software Applications Developer with background in Pharmacy",
+      image: "https://bagumamartin.com/images/profile.png",
+      url: "https://bagumamartin.com/about",
+      nationality: "Ugandan",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Budapest",
+        addressCountry: "Hungary",
       },
-      {
-        "@type": "EducationalOrganization",
-        name: "Bachelor of Pharmacy",
-        startDate: "2013",
-        endDate: "2017",
+      alumniOf: [
+        {
+          "@type": "EducationalOrganization",
+          name: "Master's in Computer Science",
+          startDate: "2020",
+          endDate: "2022",
+        },
+        {
+          "@type": "EducationalOrganization",
+          name: "Bachelor of Pharmacy",
+          startDate: "2013",
+          endDate: "2017",
+        },
+      ],
+      worksFor: {
+        "@type": "Organization",
+        name: "Freelance",
       },
-    ],
-    worksFor: {
-      "@type": "Organization",
-      name: "Freelance",
+      knowsAbout: [
+        "Web Development",
+        "Mobile Development",
+        "Data Science",
+        "Systems Development",
+        "Cybersecurity",
+        "Pharmacy",
+      ],
     },
-    knowsAbout: [
-      "Web Development",
-      "Mobile Development",
-      "Data Science",
-      "Systems Development",
-      "Cybersecurity",
-      "Pharmacy",
-    ],
-  }),
-  defineOccupation({
-    name: "Software Applications Developer",
-    description:
-      "Professional who designs and creates software applications across multiple platforms",
-    estimatedSalary: {
-      "@type": "MonetaryAmountDistribution",
-      currency: "EUR",
-      percentile10: "50000",
-      percentile90: "150000",
+    {
+      "@context": "https://schema.org",
+      "@type": "Occupation",
+      name: "Software Applications Developer",
+      description:
+        "Professional who designs and creates software applications across multiple platforms",
+      estimatedSalary: {
+        "@type": "MonetaryAmountDistribution",
+        currency: "EUR",
+        percentile10: "50000",
+        percentile90: "150000",
+      },
+      occupationLocation: {
+        "@type": "Country",
+        name: "Hungary",
+      },
+      skills:
+        "Web development, mobile app development, system architecture, data science, cybersecurity, healthcare IT",
     },
-    occupationLocation: {
-      "@type": "Country",
-      name: "Hungary",
-    },
-    skills:
-      "Web development, mobile app development, system architecture, data science, cybersecurity, healthcare IT",
-  }),
-]);
+  ]);
+});
 </script>
