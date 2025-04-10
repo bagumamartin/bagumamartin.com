@@ -15,7 +15,19 @@
   force = true
 
 [[redirects]]
+  from = "http://semmverse.bagumamartin.com/*"
+  to = "/semmverse/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
   from = "https://bodysync.bagumamartin.com/*"
+  to = "/bodysync/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "http://bodysync.bagumamartin.com/*"
   to = "/bodysync/:splat"
   status = 200
   force = true

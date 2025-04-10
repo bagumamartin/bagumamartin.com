@@ -46,6 +46,18 @@ export default defineNuxtConfig({
     prerender: {
       crawlLinks: true,
     },
+    routeRules: {
+      "/semmverse/**": {
+        headers: {
+          "x-subdomain-content": "semmverse",
+        },
+      },
+      "/bodysync/**": {
+        headers: {
+          "x-subdomain-content": "bodysync",
+        },
+      },
+    },
   },
 
   generate: {
