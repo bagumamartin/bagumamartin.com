@@ -1,0 +1,37 @@
+# Default build settings
+[build]
+  publish = ".output/public"
+  command = "npm run build"
+
+# Production context
+[context.production]
+  command = "npm run build"
+
+# Redirect rules for subdomains
+[[redirects]]
+  from = "https://semmverse.bagumamartin.com/*"
+  to = "https://semmverse.bagumamartin.com/semmverse/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "https://bodysync.bagumamartin.com/*"
+  to = "https://bodysync.bagumamartin.com/bodysync/:splat"
+  status = 200
+  force = true
+
+# Handle 404s
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404
+
+# Headers for security
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
