@@ -7,6 +7,19 @@
 [context.production]
   command = "npm run generate"
 
+# Explicitly process subdomains before other redirects
+[[redirects]]
+  from = "https://semmverse.bagumamartin.com/"
+  to = "/semmverse/index.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "http://semmverse.bagumamartin.com/"
+  to = "/semmverse/index.html"
+  status = 200
+  force = true
+
 # Redirect rules for subdomains
 [[redirects]]
   from = "https://semmverse.bagumamartin.com/*"
@@ -17,6 +30,18 @@
 [[redirects]]
   from = "http://semmverse.bagumamartin.com/*"
   to = "/semmverse/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "https://bodysync.bagumamartin.com/"
+  to = "/bodysync/index.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "http://bodysync.bagumamartin.com/"
+  to = "/bodysync/index.html"
   status = 200
   force = true
 
