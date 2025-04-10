@@ -1,6 +1,6 @@
 # Default build settings
 [build]
-  publish = ".output/public"
+  publish = "dist"
   command = "npm run generate"
 
 # Production context
