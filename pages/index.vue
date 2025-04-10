@@ -225,6 +225,14 @@
 </template>
 
 <script setup lang="ts">
+// Custom function to define ProfessionalService schema
+const defineProfessionalService = (professionalService: any) => {
+  return {
+    "@type": "ProfessionalService",
+    ...professionalService,
+  };
+};
+
 definePageMeta({
   title: "Software Applications Developer",
   description:
@@ -265,9 +273,11 @@ useSchemaOrg([
       }),
     }),
     gender: "Male",
-    description: ["Technologist", "Pharmacist"],
+    description: ["Software Developer", "Technologist", "Pharmacist"],
     url: "https://bagumamartin.com",
     image: "https://bagumamartin.com/images/profile.png",
+    jobTitle: "Software Applications Developer",
+    knowsLanguage: ["English", "Hungarian"],
     address: defineAddress({
       addressLocality: "Budapest",
       addressCountry: "Hungary",
@@ -279,6 +289,33 @@ useSchemaOrg([
       "https://www.facebook.com/baguma.a.martinamanya",
       "https://www.linkedin.com/in/baguma-martin-b924381a7/",
       "https://github.com/bagumamartin",
+    ],
+  }),
+  defineProfessionalService({
+    name: "Baguma Martin Software Development Services",
+    description:
+      "Professional software development services including web, mobile, and desktop applications development, data science solutions, and cybersecurity services",
+    url: "https://bagumamartin.com/services",
+    provider: {
+      "@type": "Person",
+      name: "Baguma Martin Amanya",
+    },
+    areaServed: {
+      "@type": "GeoCircle",
+      geoMidpoint: {
+        "@type": "GeoCoordinates",
+        latitude: 47.4979,
+        longitude: 19.0402,
+      },
+      geoRadius: "40000",
+    },
+    availableLanguage: ["English", "Hungarian"],
+    serviceType: [
+      "Web Development",
+      "Mobile App Development",
+      "Desktop Applications",
+      "Data Science",
+      "Cybersecurity",
     ],
   }),
   defineWebPage(),

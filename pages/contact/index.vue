@@ -224,7 +224,23 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
+// Custom function to define ContactPoint schema
+const defineContactPoint = (contactPoint: any) => {
+  return {
+    "@type": "ContactPoint",
+    ...contactPoint,
+  };
+};
+
+// Custom function to define LocalBusiness schema
+const defineLocalBusiness = (localBusiness: any) => {
+  return {
+    "@type": "LocalBusiness",
+    ...localBusiness,
+  };
+};
+
 definePageMeta({
   title: "Contact Baguma Martin",
   description:
@@ -234,4 +250,41 @@ definePageMeta({
     "Photograph of a software developer's desk with a laptop connecter to a monitor.",
   imageType: "image/jpeg",
 });
+
+// JSON-LD Schema Markup for Contact Page
+useSchemaOrg([
+  defineWebPage({
+    name: "Contact Baguma Martin",
+    description:
+      "Contact information and form to get in touch with Baguma Martin",
+  }),
+  defineContactPoint({
+    contactType: "customer service",
+    telephone: "+36205381733",
+    email: "martin@bagumamartin.com",
+    areaServed: "Worldwide",
+    availableLanguage: ["English", "Hungarian"],
+    contactOption: ["TollFree", "HearingImpairedSupported"],
+  }),
+  defineLocalBusiness({
+    name: "Baguma Martin Software Development Services",
+    description: "Professional software development services offered worldwide",
+    url: "https://bagumamartin.com",
+    telephone: "+36205381733",
+    email: "martin@bagumamartin.com",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Budapest",
+      addressCountry: "Hungary",
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: "47.4979",
+      longitude: "19.0402",
+    },
+    openingHours: "Mo-Fr 09:00-18:00",
+    priceRange: "€€",
+    availableLanguage: ["English", "Hungarian"],
+  }),
+]);
 </script>

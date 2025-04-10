@@ -231,7 +231,15 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
+// Custom function to define Occupation schema
+const defineOccupation = (occupation: any) => {
+  return {
+    "@type": "Occupation",
+    ...occupation,
+  };
+};
+
 definePageMeta({
   title: "About Baguma Martin",
   description:
@@ -240,4 +248,70 @@ definePageMeta({
   imageAlt: "Profile photograph of Baguma Martin",
   imageType: "image/png",
 });
+
+// JSON-LD Schema Markup for About Page
+useSchemaOrg([
+  defineWebPage({
+    name: "About Baguma Martin",
+    description:
+      "Professional background, education, and expertise of Baguma Martin, Software Developer & Pharmacist",
+  }),
+  definePerson({
+    name: "Baguma Martin Amanya",
+    alternateName: "Baguma Martin",
+    jobTitle: "Software Applications Developer",
+    description: "Software Applications Developer with background in Pharmacy",
+    image: "https://bagumamartin.com/images/profile.png",
+    url: "https://bagumamartin.com/about",
+    nationality: "Ugandan",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Budapest",
+      addressCountry: "Hungary",
+    },
+    alumniOf: [
+      {
+        "@type": "EducationalOrganization",
+        name: "Master's in Computer Science",
+        startDate: "2020",
+        endDate: "2022",
+      },
+      {
+        "@type": "EducationalOrganization",
+        name: "Bachelor of Pharmacy",
+        startDate: "2013",
+        endDate: "2017",
+      },
+    ],
+    worksFor: {
+      "@type": "Organization",
+      name: "Freelance",
+    },
+    knowsAbout: [
+      "Web Development",
+      "Mobile Development",
+      "Data Science",
+      "Systems Development",
+      "Cybersecurity",
+      "Pharmacy",
+    ],
+  }),
+  defineOccupation({
+    name: "Software Applications Developer",
+    description:
+      "Professional who designs and creates software applications across multiple platforms",
+    estimatedSalary: {
+      "@type": "MonetaryAmountDistribution",
+      currency: "EUR",
+      percentile10: "50000",
+      percentile90: "150000",
+    },
+    occupationLocation: {
+      "@type": "Country",
+      name: "Hungary",
+    },
+    skills:
+      "Web development, mobile app development, system architecture, data science, cybersecurity, healthcare IT",
+  }),
+]);
 </script>

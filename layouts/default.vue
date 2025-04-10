@@ -10,7 +10,7 @@
         <NuxtLazyHydrate when-idle>
           <HeaderBurger
             burger-background-class="bg-primary"
-            class="absolute right-[2rem] z-[9999] sm:hidden"
+            class="absolute right-[2rem] z-[9999] sm:keyden"
           />
         </NuxtLazyHydrate>
         <nav
@@ -20,9 +20,7 @@
           <div
             class="h-full pl-[20vw] text-left text-heading-5 text-primary font-poppins flex flex-col gap-y-[3vh] justify-start sm:w-full sm:flex-row sm:justify-end sm:items-center sm:gap-x-[4vw] sm:pl-0"
           >
-            <NuxtLink to="/" @click="storeShowMenu.closeMenu"> 
-              Home 
-            </NuxtLink>
+            <NuxtLink to="/" @click="storeShowMenu.closeMenu"> Home </NuxtLink>
             <NuxtLink to="/samples" @click="storeShowMenu.closeMenu">
               Samples
             </NuxtLink>
@@ -112,13 +110,13 @@ useHead({
   meta: [
     // Open graph tag for SEO
     {
-      hid: "og:site_name",
+      key: "og:site_name",
       property: "og:site_name",
       content: "Baguma Martin | Applications Developer",
       tagPriority: "critical",
     },
     {
-      hid: "og:title",
+      key: "og:title",
       property: "og:title",
       content: () => {
         return route.meta.title
@@ -128,13 +126,13 @@ useHead({
       tagPriority: "critical",
     },
     {
-      hid: "og:type",
+      key: "og:type",
       property: "og:type",
       content: "website",
       tagPriority: "critical",
     },
     {
-      hid: "og:description",
+      key: "og:description",
       property: "og:description",
       content: () => {
         return route.meta.description
@@ -144,7 +142,7 @@ useHead({
       tagPriority: "critical",
     },
     {
-      hid: "og:image",
+      key: "og:image",
       property: "og:image",
       content: () => {
         return route.meta.image
@@ -154,7 +152,7 @@ useHead({
       tagPriority: "critical",
     },
     {
-      hid: "og:image:secure_url",
+      key: "og:image:secure_url",
       property: "og:image:secure_url",
       content: () => {
         return route.meta.image
@@ -164,7 +162,7 @@ useHead({
       tagPriority: "critical",
     },
     {
-      hid: "og:image:alt",
+      key: "og:image:alt",
       property: "og:image:alt",
       content: () => {
         return route.meta.imageAlt
@@ -174,7 +172,7 @@ useHead({
       tagPriority: "critical",
     },
     {
-      hid: "og:image:type",
+      key: "og:image:type",
       property: "og:image:type",
       content: () => {
         return route.meta.imageType ? `${route.meta.imageType}` : "image/jpeg";
@@ -182,44 +180,44 @@ useHead({
       tagPriority: "critical",
     },
     {
-      hid: "og:image:width",
+      key: "og:image:width",
       property: "og:image:width",
       content: "1200",
       tagPriority: "critical",
     },
     {
-      hid: "og:image:height",
+      key: "og:image:height",
       property: "og:image:height",
       content: "630",
       tagPriority: "critical",
     },
     {
-      hid: "og:url",
+      key: "og:url",
       property: "og:url",
       content: `${baseURI}${route.fullPath}`,
       tagPriority: "critical",
     },
     // Twitter card data for SEO
     {
-      hid: "twitter:card",
+      key: "twitter:card",
       name: "twitter:card",
       content: "summary_large_image",
       tagPriority: "critical",
     },
     {
-      hid: "twitter:site",
+      key: "twitter:site",
       name: "twitter:site",
       content: "@BagumaMartinA",
       tagPriority: "critical",
     },
     {
-      hid: "twitter:creator",
+      key: "twitter:creator",
       name: "twitter:creator",
       content: "@BagumaMartinA",
       tagPriority: "critical",
     },
     {
-      hid: "twitter:title",
+      key: "twitter:title",
       name: "twitter:title",
       content: () => {
         return route.meta.title
@@ -229,7 +227,7 @@ useHead({
       tagPriority: "critical",
     },
     {
-      hid: "twitter:description",
+      key: "twitter:description",
       name: "twitter:description",
       content: () => {
         return route.meta.description
@@ -239,7 +237,7 @@ useHead({
       tagPriority: "critical",
     },
     {
-      hid: "twitter:image",
+      key: "twitter:image",
       name: "twitter:image",
       content: () => {
         return route.meta.image
@@ -249,21 +247,20 @@ useHead({
       tagPriority: "critical",
     },
     {
-      hid: "twitter:url",
+      key: "twitter:url",
       name: "twitter:url",
       content: `${baseURI}${route.fullPath}`,
-      tagPosition: "head",
       tagPriority: "critical",
     },
 
     // Microsoft tiles
     {
-      hid: "msapplication-TileColor",
+      key: "msapplication-TileColor",
       name: "msapplication-TileColor",
       content: "#DC143C",
     },
     {
-      hid: "msapplication-TileImage",
+      key: "msapplication-TileImage",
       name: "msapplication-TileImage",
       content: () => {
         return route.meta.image
@@ -272,91 +269,91 @@ useHead({
       },
     },
     {
-      hid: "theme-color",
+      key: "theme-color",
       name: "theme-color",
       content: "#DC143C",
     },
 
     // Other SEO
     {
-      hid: "robots",
+      key: "robots",
       name: "robots",
       content: "index, follow",
     },
     {
-      hid: "googlebot",
+      key: "googlebot",
       name: "googlebot",
       content: "index, follow",
     },
     {
-      hid: "bingbot",
+      key: "bingbot",
       name: "bingbot",
       content: "index, follow",
     },
     {
-      hid: "apple-mobile-web-app-capable",
+      key: "apple-mobile-web-app-capable",
       name: "apple-mobile-web-app-capable",
       content: "yes",
     },
     {
-      hid: "apple-mobile-web-app-status-bar-style",
+      key: "apple-mobile-web-app-status-bar-style",
       name: "apple-mobile-web-app-status-bar-style",
       content: "black-translucent",
     },
     {
-      hid: "apple-mobile-web-app-title",
+      key: "apple-mobile-web-app-title",
       name: "apple-mobile-web-app-title",
       content: "Baguma Martin",
     },
     {
-      hid: "application-name",
+      key: "application-name",
       name: "application-name",
       content: "Baguma Martin",
     },
     {
-      hid: "msapplication-TileColor",
+      key: "msapplication-TileColor",
       name: "msapplication-TileColor",
       content: "#DC143C",
     },
     {
-      hid: "msapplication-TileImage",
+      key: "msapplication-TileImage",
       name: "msapplication-TileImage",
       content: "/images/mstile-144x144.png",
     },
     {
-      hid: "theme-color",
+      key: "theme-color",
       name: "theme-color",
       content: "#DC143C",
     },
     {
-      hid: "format-detection",
+      key: "format-detection",
       name: "format-detection",
       content: "telephone=no",
     },
     {
-      hid: "mobile-web-app-capable",
+      key: "mobile-web-app-capable",
       name: "mobile-web-app-capable",
       content: "yes",
     },
     {
-      hid: "apple-mobile-web-app-capable",
+      key: "apple-mobile-web-app-capable",
       name: "apple-mobile-web-app-capable",
       content: "yes",
     },
     {
-      hid: "apple-mobile-web-app-status-bar-style",
+      key: "apple-mobile-web-app-status-bar-style",
       name: "apple-mobile-web-app-status-bar-style",
       content: "black-translucent",
     },
     {
-      hid: "apple-mobile-web-app-title",
+      key: "apple-mobile-web-app-title",
       name: "apple-mobile-web-app-title",
       content: "Baguma Martin",
     },
 
     // General SEO
     {
-      hid: "description",
+      key: "description",
       name: "description",
       content: () => {
         return route.meta.description
@@ -365,29 +362,40 @@ useHead({
       },
     },
     {
-      hid: "author",
+      key: "author",
       name: "author",
       content: "Baguma Martin",
     },
     {
-      hid: "keywords",
+      key: "keywords",
       name: "keywords",
-      content: "software developer, applications developer, web developer",
+      content:
+        "software developer, applications developer, web developer, mobile app developer, Vue.js, React, JavaScript, Python, PHP, fullstack developer, Budapest, remote developer, healthcare IT, data science, cybersecurity",
     },
     {
-      hid: "viewport",
+      key: "viewport",
       name: "viewport",
       content: "width=device-width, initial-scale=1.0",
+    },
+    {
+      key: "geo.position",
+      name: "geo.position",
+      content: "47.4979;19.0402",
+    },
+    {
+      key: "geo.placename",
+      name: "geo.placename",
+      content: "Budapest, Hungary",
     },
   ],
   link: [
     {
-      hid: "canonical",
+      key: "canonical",
       rel: "canonical",
       href: `${baseURI}${route.fullPath}`,
     },
     {
-      hid: "thumbnailUrl",
+      key: "thumbnailUrl",
       href: `${baseURI}${route.meta.image}`,
     },
   ],

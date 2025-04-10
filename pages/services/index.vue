@@ -390,7 +390,15 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
+// Custom function to define Service schema
+const defineService = (service: any) => {
+  return {
+    "@type": "Service",
+    ...service,
+  };
+};
+
 definePageMeta({
   title: "Software Applications Development Services",
   description:
@@ -400,4 +408,78 @@ definePageMeta({
     "Photograph of a software developer's desk with a laptop connecter to a monitor.",
   imageType: "image/jpeg",
 });
+
+// JSON-LD Schema Markup for Services Page
+useSchemaOrg([
+  defineWebPage({
+    name: "Software Development Services",
+    description:
+      "Comprehensive software development services offered by Baguma Martin",
+  }),
+  defineService({
+    name: "Software Development Services",
+    provider: {
+      "@type": "Person",
+      name: "Baguma Martin Amanya",
+      url: "https://bagumamartin.com",
+    },
+    serviceType: "Software Development",
+    areaServed: "Worldwide",
+    description:
+      "Professional software development services including web applications, mobile apps, custom solutions, data science, technical consulting and cybersecurity services.",
+    offers: {
+      "@type": "Offer",
+      availability: "https://schema.org/InStock",
+      price: "Varies",
+      priceCurrency: "EUR",
+    },
+  }),
+  defineItemList({
+    name: "Services Offered",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Web Application Development",
+        description:
+          "Responsive websites, e-commerce solutions, web portals, and progressive web apps",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Mobile Application Development",
+        description:
+          "Native iOS and Android applications, cross-platform solutions",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: "Custom Software Solutions",
+        description:
+          "Desktop applications, enterprise solutions, healthcare systems",
+      },
+      {
+        "@type": "ListItem",
+        position: 4,
+        name: "Data Science & AI Solutions",
+        description:
+          "Data analysis, machine learning models, predictive analytics",
+      },
+      {
+        "@type": "ListItem",
+        position: 5,
+        name: "Technical Consulting",
+        description:
+          "Technology assessment, architecture planning, code reviews",
+      },
+      {
+        "@type": "ListItem",
+        position: 6,
+        name: "Cybersecurity Services",
+        description:
+          "Security assessment, vulnerability testing, compliance guidance",
+      },
+    ],
+  }),
+]);
 </script>

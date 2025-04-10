@@ -163,6 +163,22 @@ useHead({
       property: "og:url",
       content: `${baseURI}${route.fullPath}`,
     },
+    {
+      hid: "geo.position",
+      name: "geo.position",
+      content: "47.4979;19.0402",
+    },
+    {
+      hid: "geo.placename",
+      name: "geo.placename",
+      content: "Budapest, Hungary",
+    },
+    {
+      hid: "keywords",
+      name: "keywords",
+      content:
+        "software samples, portfolio, web development example, pharmacy website template, project portfolio",
+    },
 
     // Microsoft tiles
     {

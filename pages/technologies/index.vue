@@ -524,7 +524,15 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
+// Custom function to define CreativeWork schema
+const defineCreativeWork = (creativeWork: any) => {
+  return {
+    "@type": "CreativeWork",
+    ...creativeWork,
+  };
+};
+
 definePageMeta({
   title: "Technologies I Use",
   description:
@@ -534,4 +542,80 @@ definePageMeta({
     "Photograph of a software developer's desk with a laptop connecter to a monitor.",
   imageType: "image/jpeg",
 });
+
+// JSON-LD Schema Markup for Technologies Page
+useSchemaOrg([
+  defineWebPage({
+    name: "Technologies Used by Baguma Martin",
+    description:
+      "Programming languages, frameworks, and tools used by Baguma Martin for software development",
+  }),
+  defineItemList({
+    name: "Technology Categories",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Frontend Development",
+        description: "Vue.js, Nuxt.js, React, Next.js, Angular, Tailwind CSS",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Backend Development",
+        description: "Node.js, Express, Python, Django, PHP, Laravel",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: "Mobile Development",
+        description: "React Native, Flutter, Swift, Kotlin",
+      },
+      {
+        "@type": "ListItem",
+        position: 4,
+        name: "Database & Storage",
+        description: "MongoDB, PostgreSQL, MySQL, Firebase, Redis, GraphQL",
+      },
+      {
+        "@type": "ListItem",
+        position: 5,
+        name: "DevOps & Cloud",
+        description:
+          "Docker, Kubernetes, AWS, Google Cloud, Azure, GitLab CI/CD",
+      },
+      {
+        "@type": "ListItem",
+        position: 6,
+        name: "Data Science & AI",
+        description: "TensorFlow, PyTorch, Pandas, Scikit-learn",
+      },
+    ],
+  }),
+  defineCreativeWork({
+    name: "Technical Skills Assessment",
+    creator: {
+      "@type": "Person",
+      name: "Baguma Martin",
+    },
+    abstract:
+      "Detailed assessment of technical expertise across multiple programming disciplines and technologies",
+    audience: {
+      "@type": "Audience",
+      audienceType: "Businesses seeking software development services",
+    },
+    keywords: [
+      "Vue.js",
+      "React",
+      "Node.js",
+      "Python",
+      "Django",
+      "Mobile Development",
+      "Machine Learning",
+      "Cloud Computing",
+      "DevOps",
+      "Database Design",
+    ],
+  }),
+]);
 </script>
