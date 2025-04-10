@@ -10,13 +10,13 @@
 # Redirect rules for subdomains
 [[redirects]]
   from = "https://semmverse.bagumamartin.com/*"
-  to = "https://semmverse.bagumamartin.com/semmverse/:splat"
+  to = "/semmverse/:splat"
   status = 200
   force = true
 
 [[redirects]]
   from = "https://bodysync.bagumamartin.com/*"
-  to = "https://bodysync.bagumamartin.com/bodysync/:splat"
+  to = "/bodysync/:splat"
   status = 200
   force = true
 

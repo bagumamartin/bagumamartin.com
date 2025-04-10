@@ -27,7 +27,20 @@
                   Send Me a Message
                 </h2>
 
-                <form class="space-y-6">
+                <form
+                  class="space-y-6"
+                  name="contact"
+                  method="POST"
+                  data-netlify="true"
+                  netlify-honeypot="bot-field"
+                >
+                  <input type="hidden" name="form-name" value="contact" />
+                  <p class="hidden">
+                    <label>
+                      Don't fill this out if you're human:
+                      <input name="bot-field" />
+                    </label>
+                  </p>
                   <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label
@@ -38,6 +51,7 @@
                       <input
                         type="text"
                         id="name"
+                        name="name"
                         class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                         placeholder="Enter your name"
                         required
@@ -52,6 +66,7 @@
                       <input
                         type="email"
                         id="email"
+                        name="email"
                         class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                         placeholder="Enter your email"
                         required
@@ -68,6 +83,7 @@
                     <input
                       type="text"
                       id="subject"
+                      name="subject"
                       class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                       placeholder="What is this regarding?"
                       required
@@ -82,6 +98,7 @@
                     >
                     <textarea
                       id="message"
+                      name="message"
                       rows="6"
                       class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                       placeholder="How can I help you?"
