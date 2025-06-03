@@ -10,15 +10,15 @@
         <NuxtLazyHydrate when-idle>
           <HeaderBurger
             burger-background-class="bg-primary"
-            class="absolute right-[2rem] z-[9999] sm:keyden"
+            class="absolute right-[2rem] z-[9999]"
           />
         </NuxtLazyHydrate>
         <nav
-          class="h-[100vh] pt-[10vh] inset-[0_0_0_30%] bg-black-50 backdrop-blur-[1.5rem] fixed transition-[all_1s_ease-in-out] sm:w-full sm:h-full sm:translate-x-0 sm:pt-0 sm:inset-auto sm:static sm:bg-transparent sm:backdrop-blur-0 sm:transition-none sm:inset-auto"
+          class="h-[100vh] pt-[10vh] inset-[0_0_0_30%] bg-black-50 backdrop-blur-[1.5rem] fixed transition-[all_1s_ease-in-out] lg:inset-[0_0_0_50%] lg:h-full lg:translate-x-0 lg:pt-0 lg:static lg:bg-transparent lg:backdrop-blur-0 lg:transition-none"
           :class="storeShowMenu.showMenu ? 'translate-x-0' : 'translate-x-full'"
         >
           <div
-            class="h-full pl-[20vw] text-left text-heading-5 text-primary font-poppins flex flex-col gap-y-[3vh] justify-start sm:w-full sm:flex-row sm:justify-end sm:items-center sm:gap-x-[4vw] sm:pl-0"
+            class="h-full pl-[20vw] text-left text-heading-5 text-primary font-poppins flex flex-col gap-y-[3vh] justify-start lg:w-auto lg:flex-row lg:justify-end lg:items-center lg:gap-x-[4vw] lg:pl-0"
           >
             <NuxtLink to="/" @click="storeShowMenu.closeMenu"> Home </NuxtLink>
             <NuxtLink to="/samples" @click="storeShowMenu.closeMenu">

@@ -12,16 +12,20 @@
             <h1 class="">Hello, I'm Baguma</h1>
           </div>
           <div
-            class="typer w-full text-left text-black text-[5dvw] font-poppins lg:text-heading-1 lg:w-[70vw]"
+            class="typer w-full text-center text-black text-[5dvw] font-poppins lg:text-heading-1 lg:w-[70vw]"
           >
-            I am
-            <NuxtLazyHydrate when-idle>
-              <UtilitiesTyper
-                class="inline"
-                :typing-list="typingList"
-                :initial-content-index="0"
-                cursor-color="primary"
-            /></NuxtLazyHydrate>
+            <div
+              class="inline-block min-w-[300px] sm:min-w-[400px] lg:min-w-[600px]"
+            >
+              I am
+              <NuxtLazyHydrate when-idle>
+                <UtilitiesTyper
+                  class="inline"
+                  :typing-list="typingList"
+                  :initial-content-index="0"
+                  cursor-color="primary"
+              /></NuxtLazyHydrate>
+            </div>
           </div>
           <div
             class="w-full text-center text-black text-paragraph font-lexend lg:w-[50vw]"
