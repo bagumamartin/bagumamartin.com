@@ -25,9 +25,8 @@
             <!-- Website Samples -->
             <div class="bg-white rounded-lg shadow-md overflow-hidden">
               <div class="h-48 bg-gray-100 flex items-center justify-center">
-                <TwicImg
+                <NuxtImg
                   src="/images/samples/websites/pharmacy_website/pharmacy_sample_website_logo.png"
-                  ratio="16/9"
                   class="w-full h-full object-cover"
                 />
               </div>
@@ -99,6 +98,8 @@
 </template>
 
 <script setup lang="ts">
+import { NuxtImg } from "#components";
+
 // Import the injector plugin
 const { $injectSchema } = useNuxtApp();
 

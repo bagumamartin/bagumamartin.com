@@ -32,7 +32,6 @@
     "@nuxtjs/robots": "^4.0.2",
     "@nuxtjs/sitemap": "^6.0.0-beta.1",
     "@pinia/nuxt": "^0.4.11",
-    "@twicpics/components": "^0.22.0",
     "clsx": "^2.0.0",
     "nuxt-lazy-hydrate": "^1.0.0",
     "nuxt-precompress": "^0.5.9",

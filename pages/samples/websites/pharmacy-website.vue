@@ -191,11 +191,9 @@
                             <div
                               class="w-full h-full rounded-lg col-start-1 row-start-1 z-10 text-[.8rem] text-white bg-black-50 flex items-center justify-center"
                             >
-                              <caption class="">
-                                <b>
-                                  {{ category.name }}
-                                </b>
-                              </caption>
+                              <span class="font-bold">
+                                {{ category.name }}
+                              </span>
                             </div>
                           </figure>
                         </div>

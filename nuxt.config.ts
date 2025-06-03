@@ -1,4 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
   sourcemap: true,
@@ -16,7 +17,6 @@ export default defineNuxtConfig({
     "nuxt-lazy-hydrate",
     "nuxt-delay-hydration",
     "nuxt-swiper",
-    "@twicpics/components/nuxt3",
   ],
 
   css: ["~/assets/style/main.scss"],
@@ -69,7 +69,7 @@ export default defineNuxtConfig({
   },
 
   gtag: {
-    id: process.env.NUXT_PUBLIC_GTAG_ID,
+    id: process.env.NUXT_PUBLIC_GTAG_ID || "",
     initialConsent: true,
   },
 
@@ -152,10 +152,6 @@ export default defineNuxtConfig({
     mode: "mount",
     // enables nuxt-delay-hydration in dev mode for testing
     debug: process.env.NODE_ENV === "development",
-  },
-
-  twicpics: {
-    domain: process.env.NUXT_TWICPICS_URL,
   },
 
   compatibilityDate: "2024-08-11",

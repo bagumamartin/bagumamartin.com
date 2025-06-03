@@ -42,7 +42,7 @@
               `rounded-full ${props.burgerBackgroundClass} absolute left-0 top-[1rem] w-[1rem] h-[0.125rem] transition duration-500 ease-in-out`,
               storeShowMenu.showMenu
                 ? 'w-[1.5rem] -rotate-45 translate-x-[3.5px] -translate-y-[7px] right-0'
-                : 'transform-none w-[1rem] transform-none'
+                : 'transform-none w-[1rem]'
             )
           )
         "
