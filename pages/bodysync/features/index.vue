@@ -80,7 +80,7 @@
           <!-- Feature 3 -->
           <div class="bg-white p-8 rounded-lg shadow-lg">
             <div class="text-blue-600 mb-4">
-              <Icon name="material-symbols:goal" class="text-4xl" />
+              <Icon name="material-symbols:target" class="text-4xl" />
             </div>
             <h3 class="font-bold text-xl mb-3 font-poppins">Goal Setting</h3>
             <p class="text-gray-600 font-lexend mb-4">

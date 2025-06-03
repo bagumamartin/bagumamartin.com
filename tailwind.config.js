@@ -8,18 +8,23 @@ module.exports = {
     './nuxt.config.{js,ts}',
     './app.vue',
   ],
+  darkMode: 'class',
   theme: {
     extend: {
+      fontFamily: {
+        'poppins': ['Poppins', 'sans-serif'],
+        'lexend': ['Lexend', 'sans-serif'],
+      },
       colors: {
-        'primary': '#DC143C',
-        'secondary': '#F21E0A',
-        'accent': '#D009E8',
-        'Black': '#241D1F',
-        'black-75': 'rgba(36.47, 29.48, 30.88, 0.75)',
-        'black-50': 'rgba(36.47, 29.48, 30.88, 0.50)',
-        'black-25': 'rgba(36.47, 29.48, 30.88, 0.25)',
-        'black-10': 'rgba(36.47, 29.48, 30.88, 0.10)',
-        'black-5': 'rgba(36.47, 29.48, 30.88, 0.05)',
+        'primary': 'var(--color-primary)',
+        'secondary': 'var(--color-secondary)',
+        'accent': 'var(--color-accent)',
+        'black': 'var(--color-black)',
+        'black-75': 'var(--color-black-75)',
+        'black-50': 'var(--color-black-50)',
+        'black-25': 'var(--color-black-25)',
+        'black-10': 'var(--color-black-10)',
+        'black-5': 'var(--color-black-5)',
       },
     },
     fontSize: {

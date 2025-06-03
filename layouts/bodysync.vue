@@ -24,7 +24,7 @@
             >
               <Icon
                 v-if="!showMobileMenu"
-                name="heroicons:menu-20-solid"
+                name="heroicons:bars-3-20-solid"
                 class="w-6 h-6"
               />
               <Icon v-else name="heroicons:x-mark-20-solid" class="w-6 h-6" />

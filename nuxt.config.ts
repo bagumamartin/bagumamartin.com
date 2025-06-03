@@ -1,12 +1,11 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
   sourcemap: true,
 
   modules: [
     "@pinia/nuxt",
-    "nuxt-icon",
+    "@nuxt/icon",
     "nuxt-gtag",
     "nuxt-schema-org",
     "@nuxtjs/robots",
@@ -17,28 +16,65 @@ export default defineNuxtConfig({
     "nuxt-lazy-hydrate",
     "nuxt-delay-hydration",
     "nuxt-swiper",
+    "@nuxtjs/tailwindcss",
   ],
 
-  css: ["~/assets/style/main.scss"],
-
-  postcss: {
-    plugins: {
-      tailwindcss: {},
-      autoprefixer: {},
+  icon: {
+    serverBundle: {
+      collections: [
+        "heroicons",
+        "material-symbols",
+        "mdi",
+        "logos",
+        "simple-icons",
+        "ic",
+      ],
+    },
+    clientBundle: {
+      scan: true,
+      sizeLimitKb: 512,
     },
   },
+
+  css: ["~/assets/style/tailwind.css", "~/assets/style/main.scss"],
 
   vite: {
     css: {
       preprocessorOptions: {
         scss: {
           additionalData: `
-          @use "@/assets/style/_transitions.scss" as *;
-          @use "@/assets/style/_colors.scss" as *;
-          @use "@/assets/style/_animations.scss" as *;
-            `,
+            @use "@/assets/style/_transitions.scss" as *;
+            @use "@/assets/style/_colors.scss" as *;
+            @use "@/assets/style/_animations.scss" as *;
+          `,
         },
       },
+    },
+    build: {
+      chunkSizeWarningLimit: 1000,
+      rollupOptions: {
+        output: {
+          manualChunks: {
+            vendor: ["vue", "@vue/runtime-core"],
+            iconify: ["@iconify/vue"],
+          },
+        },
+      },
+    },
+  },
+
+  tailwindcss: {
+    cssPath: "~/assets/style/tailwind.css",
+    configPath: "tailwind.config.js",
+    exposeConfig: false,
+  },
+
+  postcss: {
+    plugins: {
+      "postcss-import": {},
+      "postcss-nesting": {},
+      tailwindcss: {},
+      autoprefixer: {},
     },
   },
 
@@ -58,6 +94,14 @@ export default defineNuxtConfig({
         },
       },
     },
+    experimental: {
+      wasm: true,
+    },
+    esbuild: {
+      options: {
+        target: "es2022",
+      },
+    },
   },
 
   generate: {
@@ -70,7 +114,6 @@ export default defineNuxtConfig({
 
   gtag: {
     id: process.env.NUXT_PUBLIC_GTAG_ID || "",
-    initialConsent: true,
   },
 
   app: {
@@ -82,7 +125,6 @@ export default defineNuxtConfig({
         "Software Applications Development Services | Hire a Professional Developer",
       link: [
         {
-          hid: "canonical",
           rel: "canonical",
           href: "https://bagumamartin.com",
         },
@@ -131,21 +173,12 @@ export default defineNuxtConfig({
   },
 
   googleFonts: {
-    display: "swap",
-    download: true,
-    inject: true,
-    preload: true,
-    base64: true,
-    overwriting: false,
     families: {
-      Poppins: {
-        wght: [100, 200, 300, 400, 500, 600, 700, 800, 900],
-        ital: [100, 200, 300, 400, 500, 600, 700, 800, 900],
-      },
-      Lexend: {
-        wght: [100, 200, 300, 400, 500, 600, 700, 800, 900],
-      },
+      Poppins: [300, 400, 500, 600, 700, 800],
+      Lexend: [300, 400, 500, 600, 700],
     },
+    display: "swap",
+    preload: true,
   },
 
   delayHydration: {
