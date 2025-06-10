@@ -18,7 +18,7 @@
                 >
                   <nuxt-img
                     src="/images/profile.png"
-                    alt="Baguma Martin profile photograph"
+                    alt="Martin profile photograph"
                     format="webp"
                     loading="lazy"
                     class="w-full h-full object-cover"
@@ -33,25 +33,25 @@
                 class="text-paragraph text-black font-lexend space-y-[1.5rem]"
               >
                 <h2 class="text-2xl font-bold text-primary font-poppins">
-                  Baguma Martin Amanya
+                  Martin
                 </h2>
                 <p class="italic text-lg">
-                  Software Applications Developer & Pharmacist
+                  Pharmaceutical Sciences Student & Self‑Taught Programmer
                 </p>
                 <p>
-                  I am a versatile professional with a unique blend of expertise
-                  in software development and pharmacy. Based in Budapest,
-                  Hungary, I bring a diverse perspective to my work, combining
-                  analytical thinking from my pharmaceutical background with
-                  creative problem-solving in technology.
+                  I am currently studying Pharmaceutical Sciences in Budapest,
+                  Hungary, and have developed a passion for programming through
+                  self‑directed learning. My background in the pharmaceutical
+                  sciences gives me a strong foundation in analytical thinking,
+                  while my coding projects sharpen my problem‑solving and
+                  creative skills.
                 </p>
                 <p>
-                  With over 5 years of experience in software development, I
-                  specialize in creating robust, user-friendly applications that
-                  solve real-world problems. My dual background allows me to
-                  bring a unique perspective to healthcare technology projects,
-                  understanding both technical requirements and end-user needs
-                  in specialized domains.
+                  Over the past few years, I’ve built web and mobile
+                  applications to tackle real‑world challenges, from lab data
+                  visualizations to simple productivity tools. I enjoy bridging
+                  the gap between healthcare knowledge and technology to create
+                  practical solutions.
                 </p>
               </div>
             </div>
@@ -71,8 +71,8 @@
                   <h3 class="text-xl font-semibold">Web Development</h3>
                 </div>
                 <p class="font-lexend">
-                  Building responsive, accessible, and performant web
-                  applications using modern frameworks and best practices.
+                  Building responsive, accessible web applications using modern
+                  frameworks and best practices.
                 </p>
               </div>
 
@@ -86,8 +86,8 @@
                   <h3 class="text-xl font-semibold">Mobile Development</h3>
                 </div>
                 <p class="font-lexend">
-                  Creating native and cross-platform mobile applications for iOS
-                  and Android with intuitive user experiences.
+                  Creating cross-platform mobile apps with intuitive user
+                  experiences.
                 </p>
               </div>
 
@@ -101,8 +101,8 @@
                   <h3 class="text-xl font-semibold">Data Science</h3>
                 </div>
                 <p class="font-lexend">
-                  Analyzing complex datasets to extract valuable insights and
-                  build predictive models using machine learning.
+                  Analyzing datasets to extract insights and build predictive
+                  models.
                 </p>
               </div>
 
@@ -113,8 +113,7 @@
                   <h3 class="text-xl font-semibold">Systems Development</h3>
                 </div>
                 <p class="font-lexend">
-                  Designing and implementing efficient, scalable system
-                  architectures for robust applications.
+                  Designing efficient, scalable system architectures.
                 </p>
               </div>
 
@@ -128,23 +127,24 @@
                   <h3 class="text-xl font-semibold">Cybersecurity</h3>
                 </div>
                 <p class="font-lexend">
-                  Identifying vulnerabilities and implementing robust security
-                  measures to protect digital assets.
+                  Identifying vulnerabilities and enforcing security measures.
                 </p>
               </div>
 
-              <!-- Pharmacy -->
+              <!-- Pharmaceutical Solutions -->
               <div class="bg-white p-6 rounded-lg shadow-md">
                 <div class="flex items-center mb-4">
                   <Icon
                     name="mdi:medical-bag"
                     class="text-4xl text-primary mr-4"
                   />
-                  <h3 class="text-xl font-semibold">Pharmacy</h3>
+                  <h3 class="text-xl font-semibold">
+                    Pharmaceutical Solutions
+                  </h3>
                 </div>
                 <p class="font-lexend">
-                  Leveraging pharmaceutical knowledge to develop specialized
-                  healthcare applications and solutions.
+                  Applying pharmaceutical knowledge to develop healthcare
+                  technology tools.
                 </p>
               </div>
             </div>
@@ -163,29 +163,12 @@
                 </h3>
                 <ul class="list-disc pl-5 space-y-4">
                   <li>
-                    <div class="font-bold">Senior Software Developer</div>
-                    <div class="text-gray-700">2022 - Present</div>
+                    <div class="font-bold">Self‑Taught Programmer</div>
+                    <div class="text-gray-700">2019 - Present</div>
                     <p>
-                      Leading development of custom software solutions for
-                      various industries with a focus on healthcare
-                      applications.
-                    </p>
-                  </li>
-                  <li>
-                    <div class="font-bold">Freelance Developer</div>
-                    <div class="text-gray-700">2019 - 2022</div>
-                    <p>
-                      Provided web and mobile development services to clients
-                      worldwide, specializing in e-commerce and healthcare
-                      systems.
-                    </p>
-                  </li>
-                  <li>
-                    <div class="font-bold">Pharmacist</div>
-                    <div class="text-gray-700">2017 - 2019</div>
-                    <p>
-                      Practiced as a licensed pharmacist, gaining valuable
-                      insights into healthcare systems and patient needs.
+                      Developing personal projects and contributing to
+                      open‑source libraries. Nowadays am focused on healthcare
+                      tech and productivity.
                     </p>
                   </li>
                 </ul>
@@ -195,18 +178,13 @@
                 <h3 class="text-xl font-semibold mb-2">Education</h3>
                 <ul class="list-disc pl-5 space-y-4">
                   <li>
-                    <div class="font-bold">Master's in Computer Science</div>
-                    <div class="text-gray-700">2020 - 2022</div>
+                    <div class="font-bold">
+                      Master of Pharmaceutical Sciences
+                    </div>
+                    <div class="text-gray-700">2023 - 2028 (expected)</div>
                     <p>
-                      Specialized in Artificial Intelligence and Data Science
-                    </p>
-                  </li>
-                  <li>
-                    <div class="font-bold">Bachelor of Pharmacy</div>
-                    <div class="text-gray-700">2013 - 2017</div>
-                    <p>
-                      Comprehensive training in pharmaceutical sciences and
-                      healthcare
+                      Currently pursuing a degree with focus on medicinal
+                      chemistry and pharmacology.
                     </p>
                   </li>
                 </ul>
@@ -217,7 +195,7 @@
           <!-- Call to Action -->
           <div class="mt-12 text-center">
             <p class="text-xl mb-6 font-lexend">
-              Interested in working together on your next project?
+              Interested in collaborating on your next project?
             </p>
             <UtilitiesButton
               class="w-[70vw] rounded-full bg-accent md:w-[50vw] lg:w-[20vw]"
@@ -238,11 +216,11 @@ const { $injectSchema } = useNuxtApp() as unknown as {
 };
 
 definePageMeta({
-  title: "About Baguma Martin",
+  title: "About Martin",
   description:
-    "Get to know more about me as an applications developer. Learn about my background, skills, projects, and passion for creating innovative solutions",
+    "Learn about my background as a Pharmaceutical Sciences student and self-taught programmer, and my passion for creating innovative healthcare solutions",
   image: "/images/profile.png",
-  imageAlt: "Profile photograph of Baguma Martin",
+  imageAlt: "Profile photograph of Martin",
   imageType: "image/png",
 });
 
@@ -252,71 +230,33 @@ onMounted(() => {
     {
       "@context": "https://schema.org",
       "@type": "WebPage",
-      name: "About Baguma Martin",
+      name: "About Martin",
       description:
-        "Professional background, education, and expertise of Baguma Martin, Software Developer & Pharmacist",
+        "Background, education, and expertise of Martin, Pharmaceutical Sciences student & self-taught programmer",
     },
     {
       "@context": "https://schema.org",
       "@type": "Person",
-      name: "Baguma Martin Amanya",
-      alternateName: "Baguma Martin",
-      jobTitle: "Software Applications Developer",
+      name: "Martin",
+      jobTitle: "Pharmaceutical Sciences Student",
       description:
-        "Software Applications Developer with background in Pharmacy",
+        "Pharmaceutical Sciences student and self-taught programmer based in Budapest",
       image: "https://bagumamartin.com/images/profile.png",
       url: "https://bagumamartin.com/about",
-      nationality: "Ugandan",
       address: {
         "@type": "PostalAddress",
         addressLocality: "Budapest",
         addressCountry: "Hungary",
       },
-      alumniOf: [
-        {
-          "@type": "EducationalOrganization",
-          name: "Master's in Computer Science",
-          startDate: "2020",
-          endDate: "2022",
-        },
-        {
-          "@type": "EducationalOrganization",
-          name: "Bachelor of Pharmacy",
-          startDate: "2013",
-          endDate: "2017",
-        },
-      ],
-      worksFor: {
-        "@type": "Organization",
-        name: "Freelance",
-      },
+      alumniOf: [],
       knowsAbout: [
         "Web Development",
         "Mobile Development",
         "Data Science",
         "Systems Development",
         "Cybersecurity",
-        "Pharmacy",
+        "Pharmaceutical Solutions",
       ],
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "Occupation",
-      name: "Software Applications Developer",
-      description:
-        "Professional who designs and creates software applications across multiple platforms",
-      estimatedSalary: {
-        "@type": "MonetaryAmountDistribution",
-        currency: "EUR",
-        percentile10: "50000",
-        percentile90: "150000",
-      },
-      occupationLocation: {
-        "@type": "Country",
-        name: "Hungary",
-      },
-      skills:
-        "Web development, mobile app development, system architecture, data science, cybersecurity, healthcare IT",
     },
   ]);
 });
